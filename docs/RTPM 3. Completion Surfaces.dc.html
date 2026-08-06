@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #f7f7fb; -webkit-font-smoothing: antialiased; }
+  a { color: #0d08d2; text-decoration: none; }
+  a:hover { color: #070474; text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: Inter, sans-serif; color: #15162b; background: #f7f7fb; max-width: 1560px; margin: 0 auto; padding: 0 56px 120px;">
+
+  <div style="padding: 72px 0 40px; border-bottom: 1px solid #e6e6f0; margin-bottom: 40px;">
+    <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">RTPM Brand System v4 · Product design system, completion set · 2026.08.04</div>
+    <h1 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 72px; line-height: 1.02; margin: 0 0 20px; letter-spacing: -0.015em; max-width: 960px;">Mobile, states, boards</h1>
+    <p style="font-size: 16px; line-height: 1.55; color: #595b78; margin: 0; max-width: 780px;">The five surfaces left unfinished after sections 01–08. Nothing here revises approved work: the tokens, the four-stage rule, the register anatomy and the record pattern are treated as locked and extended. Sections continue the Product Design System numbering.</p>
+  </div>
+
+  <div style="background: #e7e6fa; border: 1px solid #dcdce8; border-radius: 12px; padding: 16px 20px; margin-bottom: 72px; font-size: 13px; line-height: 1.6;"><strong style="font-weight: 600;">Inherited and unchanged:</strong> two blues (#070474 surface, #0D08D2 signal), gold #FFCC00 for one primary action, the four-level severity scale, the four-stage workflow rule, 4/8/12/16/24/32 spacing, card radius 14 and input radius 9. No new token is introduced in this document. All content is placeholder.</div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin-bottom: 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">09</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Mobile app design system</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">390 × 844 · shown at true size</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">What mobile is for</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">A deliberate subset, not the desktop app made narrow.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">On site</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Raise a record at the point of observation, photograph it, assign an owner. This is the only creation flow mobile carries.</div>
+      </div>
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Between meetings</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Clear the personal queue: approve, comment, tick a checklist item, send an update that is already drafted.</div>
+      </div>
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Not on mobile</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Registers as tables, the risk matrix, portfolio dashboards, bulk edits, and configuration. Offered as a "open on desktop" hand-off, never as a pinched-in table.</div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Consequence</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Navigation is a four-item tab bar, not the eleven-module sidebar. Modules are reached through search and through the queue, not by browsing.</div>
+      </div>
+    </div>
+    <div style="padding: 22px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Layout rules</div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Margins 16px</strong>Content gutter 16. Cards are full-bleed to those margins, radius 14 as on desktop.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Hit targets 48px</strong>Minimum 44, standard 48. Rows are 72–88px because they carry three lines of context.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Type floor 13px</strong>Body 15, labels 13, never below. The desktop 11.5px caption size does not exist on mobile.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">One navy anchor</strong>Header navy, tab bar white with a top border — the same rule that stops the desktop L, applied vertically.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 20px;">Visual example — three core screens at true size</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 28px;">
+
+        <div>
+          <div style="width: 390px; height: 844px; background: #f7f7fb; border: 1px solid #dcdce8; border-radius: 20px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.1); display: flex; flex-direction: column;">
+            <div style="flex: none; background: #070474; padding: 14px 16px 16px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM" style="height: 18px; width: auto; display: block;"><g fill="#ffffff"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="42.5" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#ffffff">RTPM</text></svg>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <span style="width: 32px; height: 32px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.24); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 13px;">⌕</span>
+                  <span style="width: 32px; height: 32px; border-radius: 999px; background: rgba(255,255,255,0.16); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">H</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 7px; height: 7px; border-radius: 999px; background: #e0a800; flex: none;"></span>
+                <div style="font-size: 15px; font-weight: 600; color: #ffffff;">Project name placeholder</div>
+                <span style="color: #cfceff; font-size: 13px; margin-left: 2px;">▾</span>
+              </div>
+              <div style="font-size: 13px; color: #cfceff; margin-top: 4px;">Sector · capacity · client placeholder</div>
+            </div>
+            <div style="flex: 1; overflow: hidden; padding: 16px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px;">
+                <div style="font-size: 17px; font-weight: 600;">My queue</div>
+                <div style="font-size: 13px; color: #595b78;">NN items</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div style="background: #ffffff; border: 1px solid #e6e6f0; border-left: 3px solid #e63946; border-radius: 14px; padding: 14px 16px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-family: ui-monospace, monospace; font-size: 13px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #b02a34; background: #fdecee; border-radius: 999px; padding: 3px 9px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e63946;"></span>Critical</span>
+                  </div>
+                  <div style="font-size: 15px; font-weight: 500; line-height: 1.4;">Record title placeholder running to two lines at this width</div>
+                  <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+                    <span style="font-size: 13px; color: #e63946; font-weight: 600;">Overdue NN days</span>
+                    <span style="width: 4px; height: 4px; border-radius: 999px; background: #b9bacb;"></span>
+                    <span style="font-size: 13px; color: #595b78;">Assessed</span>
+                  </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 14px 16px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-family: ui-monospace, monospace; font-size: 13px; font-weight: 600; color: #595b78;">CO-0NN</span>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #b36200; background: #fff3e5; border-radius: 999px; padding: 3px 9px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #ff8b00;"></span>High</span>
+                  </div>
+                  <div style="font-size: 15px; font-weight: 500; line-height: 1.4;">Approval awaiting you, title placeholder</div>
+                  <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+                    <span style="font-size: 13px; color: #595b78;">Held NN days</span>
+                    <span style="width: 4px; height: 4px; border-radius: 999px; background: #b9bacb;"></span>
+                    <span style="font-size: 13px; color: #595b78;">Quantified</span>
+                  </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 14px 16px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                    <span style="font-family: ui-monospace, monospace; font-size: 13px; font-weight: 600; color: #595b78;">DOC-0NN</span>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #8a6600; background: #fdf4dd; border-radius: 999px; padding: 3px 9px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>Medium</span>
+                  </div>
+                  <div style="font-size: 15px; font-weight: 500; line-height: 1.4;">Document review placeholder title</div>
+                  <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px;">
+                    <span style="font-size: 13px; color: #595b78;">Due DD Mon</span>
+                    <span style="width: 4px; height: 4px; border-radius: 999px; background: #b9bacb;"></span>
+                    <span style="font-size: 13px; color: #595b78;">Under review</span>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 16px; background: #ffffff; border: 1px solid #e6e6f0; border-top: 2px solid #ffcc00; border-radius: 14px; padding: 14px 16px;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #28a745;"></span><span style="font-size: 13px; font-weight: 600;">Project Manager Agent</span></div>
+                <div style="font-size: 13px; line-height: 1.5; color: #595b78;">One-line agent summary placeholder, tap to open the panel.</div>
+              </div>
+            </div>
+            <div style="flex: none; background: #ffffff; border-top: 1px solid #e6e6f0; display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px 0 14px;">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 6px 0;"><span style="width: 22px; height: 22px; border-radius: 6px; border: 2px solid #0d08d2; box-sizing: border-box;"></span><span style="font-size: 13px; font-weight: 600; color: #0d08d2;">Queue</span></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 6px 0;"><span style="width: 22px; height: 22px; border-radius: 6px; border: 2px solid #8a8ca6; box-sizing: border-box;"></span><span style="font-size: 13px; font-weight: 500; color: #8a8ca6;">Records</span></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 6px 0;"><span style="width: 22px; height: 22px; border-radius: 6px; border: 2px solid #8a8ca6; box-sizing: border-box;"></span><span style="font-size: 13px; font-weight: 500; color: #8a8ca6;">Raise</span></div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 6px 0;"><span style="width: 22px; height: 22px; border-radius: 6px; border: 2px solid #8a8ca6; box-sizing: border-box;"></span><span style="font-size: 13px; font-weight: 500; color: #8a8ca6;">Agent</span></div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: #8a8ca6; margin-top: 12px; width: 390px;">Queue · the mobile home. Not a dashboard — a list of what is owed by this person.</div>
+        </div>
+
+        <div>
+          <div style="width: 390px; height: 844px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 20px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.1); display: flex; flex-direction: column;">
+            <div style="flex: none; background: #070474; padding: 14px 16px;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 15px; font-weight: 500; color: #ffffff;">← Back</span>
+                <span style="font-family: ui-monospace, monospace; font-size: 13px; font-weight: 600; color: #cfceff;">RK-0NN</span>
+              </div>
+            </div>
+            <div style="flex: 1; overflow: hidden;">
+              <div style="padding: 16px;">
+                <div style="font-size: 19px; font-weight: 600; line-height: 1.35;">Record title placeholder, up to three lines on a phone at this size</div>
+                <div style="font-size: 13px; color: #8a8ca6; margin-top: 8px;">Created YYYY.MM.DD · last edited YYYY.MM.DD</div>
+              </div>
+              <div style="padding: 4px 16px 18px; border-bottom: 1px solid #e6e6f0;">
+                <div style="display: flex; align-items: center; gap: 0; padding: 6px 0 10px;">
+                  <span style="width: 14px; height: 14px; border-radius: 999px; background: #28a745; flex: none;"></span>
+                  <span style="height: 2px; flex: 1; background: #28a745;"></span>
+                  <span style="width: 14px; height: 14px; border-radius: 999px; background: #28a745; flex: none;"></span>
+                  <span style="height: 2px; flex: 1; background: #e6e6f0;"></span>
+                  <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #0d08d2; box-sizing: border-box; flex: none;"></span>
+                  <span style="height: 2px; flex: 1; background: #e6e6f0;"></span>
+                  <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #e6e6f0; box-sizing: border-box; flex: none;"></span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span style="font-size: 13px; font-weight: 600; color: #0d08d2;">Stage three</span>
+                  <span style="font-size: 13px; color: #8a8ca6;">3 of 4 · owner placeholder</span>
+                </div>
+              </div>
+              <div style="padding: 16px; border-bottom: 1px solid #e6e6f0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                  <div><div style="font-size: 13px; color: #595b78; margin-bottom: 5px;">Status</div><div style="font-size: 15px; font-weight: 500;">Stage placeholder</div></div>
+                  <div><div style="font-size: 13px; color: #595b78; margin-bottom: 5px;">Priority</div><div style="display: flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 500;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #ff8b00;"></span>High</div></div>
+                  <div><div style="font-size: 13px; color: #595b78; margin-bottom: 5px;">Due</div><div style="font-size: 15px; font-weight: 500;">YYYY.MM.DD</div></div>
+                  <div><div style="font-size: 13px; color: #595b78; margin-bottom: 5px;">Workstream</div><div style="font-size: 15px; font-weight: 500;">Placeholder</div></div>
+                </div>
+              </div>
+              <div style="padding: 16px; border-bottom: 1px solid #e6e6f0;">
+                <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Responsible</div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <span style="width: 40px; height: 40px; border-radius: 999px; background: #fff3e5; color: #b36200; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex: none;">AB</span>
+                  <div><div style="font-size: 15px; font-weight: 600;">Name placeholder</div><div style="font-size: 13px; color: #8a8ca6;">Role — organisation placeholder</div></div>
+                </div>
+              </div>
+              <div style="padding: 16px;">
+                <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Checklist · N of N</div>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                  <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 24px; height: 24px; border-radius: 6px; background: #28a745; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: none;">✓</span><span style="font-size: 15px; color: #8a8ca6; text-decoration: line-through;">Completed item placeholder</span></div>
+                  <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 24px; height: 24px; border-radius: 6px; border: 2px solid #dcdce8; box-sizing: border-box; flex: none;"></span><span style="font-size: 15px;">Open item placeholder</span></div>
+                </div>
+              </div>
+            </div>
+            <div style="flex: none; border-top: 1px solid #e6e6f0; padding: 12px 16px 20px; display: flex; gap: 10px;">
+              <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 48px; line-height: 1; flex: 1; display: inline-flex; align-items: center; justify-content: center; background: #ffcc00; color: #15162b; border: none; border-radius: 9px; font-size: 15px; font-weight: 600; cursor: pointer;" style-hover="background: #f2c200;">Send Update</button>
+              <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 48px; width: 48px; line-height: 1; flex: none; display: inline-flex; align-items: center; justify-content: center; background: #ffffff; color: #0d08d2; border: 1px solid #e6e6f0; border-radius: 9px; font-size: 16px; font-weight: 600; cursor: pointer;" style-hover="background: #f7f7fb;">⋯</button>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: #8a8ca6; margin-top: 12px; width: 390px;">Record · same eight sections as desktop, one column, primary action docked.</div>
+        </div>
+
+        <div>
+          <div style="width: 390px; height: 844px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 20px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.1); display: flex; flex-direction: column;">
+            <div style="flex: none; background: #070474; padding: 14px 16px;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 15px; font-weight: 500; color: #ffffff;">Cancel</span>
+                <span style="font-size: 15px; font-weight: 600; color: #ffffff;">Raise a record</span>
+                <span style="font-size: 15px; font-weight: 600; color: #cfceff;">Next</span>
+              </div>
+            </div>
+            <div style="flex: 1; padding: 16px; overflow: hidden;">
+              <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Type</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px;">
+                <div style="border: 2px solid #0d08d2; background: #e7e6fa; border-radius: 14px; padding: 16px; font-size: 15px; font-weight: 600; color: #0d08d2;">Risk</div>
+                <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 16px; font-size: 15px; font-weight: 500;">Nonconformance</div>
+                <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 16px; font-size: 15px; font-weight: 500;">Early warning</div>
+                <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 16px; font-size: 15px; font-weight: 500;">Site observation</div>
+              </div>
+              <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Title</div>
+              <div style="border: 1px solid #e6e6f0; border-radius: 9px; padding: 14px; font-size: 15px; color: #8a8ca6; margin-bottom: 22px; min-height: 48px; box-sizing: border-box;">Describe what you observed…</div>
+              <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Evidence</div>
+              <div style="display: flex; gap: 10px; margin-bottom: 22px;">
+                <div style="width: 96px; height: 96px; border: 1px dashed #dcdce8; border-radius: 14px; background: repeating-linear-gradient(135deg, #ffffff, #ffffff 8px, #fafafd 8px, #fafafd 16px); display: flex; align-items: center; justify-content: center; font-size: 22px; color: #8a8ca6;">＋</div>
+                <div style="flex: 1; font-size: 13px; line-height: 1.5; color: #8a8ca6;">Camera or file. Location and time are captured with the image and written to the audit trail.</div>
+              </div>
+              <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Severity</div>
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+                <div style="border: 1px solid #e6e6f0; border-radius: 9px; padding: 12px 0; text-align: center; font-size: 13px; font-weight: 600; color: #b02a34;">Crit</div>
+                <div style="border: 2px solid #ff8b00; background: #fff3e5; border-radius: 9px; padding: 11px 0; text-align: center; font-size: 13px; font-weight: 700; color: #b36200;">High</div>
+                <div style="border: 1px solid #e6e6f0; border-radius: 9px; padding: 12px 0; text-align: center; font-size: 13px; font-weight: 600; color: #8a6600;">Med</div>
+                <div style="border: 1px solid #e6e6f0; border-radius: 9px; padding: 12px 0; text-align: center; font-size: 13px; font-weight: 600; color: #1b7a31;">Low</div>
+              </div>
+            </div>
+            <div style="flex: none; border-top: 1px solid #e6e6f0; padding: 12px 16px 20px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="flex: 1; height: 4px; border-radius: 999px; background: #0d08d2;"></span>
+                <span style="flex: 1; height: 4px; border-radius: 999px; background: #e6e6f0;"></span>
+                <span style="flex: 1; height: 4px; border-radius: 999px; background: #e6e6f0;"></span>
+                <span style="font-size: 13px; color: #595b78; margin-left: 6px;">1 of 3</span>
+              </div>
+            </div>
+          </div>
+          <div style="font-size: 12px; color: #8a8ca6; margin-top: 12px; width: 390px;">Raise · three steps. The only creation flow on mobile.</div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Open on the queue. A phone user has a task, not a browsing intent.</div>
+          <div>Turn register rows into cards carrying ID, severity, title, state and the clock.</div>
+          <div>Dock the primary action. It must be reachable with a thumb without scrolling.</div>
+          <div>Keep the desktop section order in the record. Familiarity across devices is the point.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Put a horizontally scrolling table on a phone. Offer the desktop hand-off instead.</div>
+          <div>Ship the eleven-module sidebar as a hamburger drawer.</div>
+          <div>Hide destructive or approval actions behind a swipe. Both need a visible, deliberate tap.</div>
+          <div>Drop below 13px type or 44px targets to fit more in.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">10</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Empty &amp; zero-data states</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Six causes, six different messages</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Empty is not one state</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">In a governance system, why a list is empty matters more than the fact that it is.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">An empty register can mean nothing has happened, nothing has been recorded, or the viewer is not permitted to see it. Those are three completely different facts about a project, and conflating them is a governance failure, not a UX one.</div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Design principles</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Every empty state names its cause, states what is true, and offers exactly one action — or none. No illustrations, no mascots, no exclamation marks. A striped placeholder block stands in where a chart or table would be, so the layout does not collapse and the reader sees what is missing.</div>
+      </div>
+    </div>
+    <div style="padding: 22px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Layout rules</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">In place, not centred</strong>The message sits inside the container it explains, at its top-left, so surrounding structure stays legible.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Three lines maximum</strong>Cause heading 15px semibold, one explanatory line 13px, one action. Nothing else.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Colour is earned</strong>Neutral by default. Only "restricted" and "unavailable" take a status colour, because only they are conditions.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 20px;">Visual example — six states</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; font-weight: 600;">Register · placeholder module</span>
+            <span style="font-size: 11.5px; color: #8a8ca6;">0 items</span>
+          </div>
+          <div style="padding: 20px 16px 24px;">
+            <div style="width: 34px; height: 34px; border-radius: 8px; border: 2px dashed #dcdce8; margin-bottom: 14px; box-sizing: border-box;"></div>
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">Nothing recorded yet</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 16px;">This register is live but no record has been created. An empty register on an active project is itself worth noticing.</div>
+            <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 36px; line-height: 1; display: inline-flex; align-items: center; background: #0d08d2; color: #ffffff; border: none; border-radius: 8px; padding: 0 14px; font-size: 12.5px; font-weight: 600; cursor: pointer;" style-hover="background: #070474;">Create the first record</button>
+          </div>
+          <div style="padding: 0 16px 16px;"><div style="height: 58px; border: 1px dashed #dcdce8; border-radius: 8px; background: repeating-linear-gradient(135deg, #ffffff, #ffffff 8px, #fafafd 8px, #fafafd 16px);"></div></div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; font-weight: 600;">Register · filtered</span>
+            <span style="font-size: 11.5px; color: #8a8ca6;">0 of NN items</span>
+          </div>
+          <div style="padding: 12px 16px 0; display: flex; gap: 6px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; border: 1px solid #0d08d2; background: #e7e6fa; border-radius: 8px; padding: 5px 10px; font-size: 11.5px; font-weight: 600; color: #0d08d2;">Filter A <span style="opacity: 0.6;">×</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; border: 1px solid #0d08d2; background: #e7e6fa; border-radius: 8px; padding: 5px 10px; font-size: 11.5px; font-weight: 600; color: #0d08d2;">Filter B <span style="opacity: 0.6;">×</span></span>
+          </div>
+          <div style="padding: 18px 16px 24px;">
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">No records match these filters</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 16px;">NN records exist in this register. Two filters are hiding all of them.</div>
+            <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 36px; line-height: 1; display: inline-flex; align-items: center; background: #ffffff; color: #15162b; border: 1px solid #e6e6f0; border-radius: 8px; padding: 0 14px; font-size: 12.5px; font-weight: 600; cursor: pointer;" style-hover="background: #f7f7fb;">Clear all filters</button>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; font-weight: 600;">Register · restricted</span>
+            <span style="font-size: 11.5px; color: #8a8ca6;">— items</span>
+          </div>
+          <div style="padding: 20px 16px 24px;">
+            <div style="display: inline-flex; align-items: center; gap: 7px; background: #fdf4dd; color: #8a6600; border-radius: 999px; padding: 4px 11px; font-size: 11.5px; font-weight: 600; margin-bottom: 14px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>Restricted</div>
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">You do not have access to this register</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 16px;">Records exist. Your role does not include them. The count is withheld deliberately, not missing.</div>
+            <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 36px; line-height: 1; display: inline-flex; align-items: center; background: #ffffff; color: #15162b; border: 1px solid #e6e6f0; border-radius: 8px; padding: 0 14px; font-size: 12.5px; font-weight: 600; cursor: pointer;" style-hover="background: #f7f7fb;">Request access</button>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; font-weight: 600;">Dashboard · new project</span>
+            <span style="font-size: 11.5px; color: #8a8ca6;">Setup incomplete</span>
+          </div>
+          <div style="padding: 16px;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px;">
+              <div style="border: 1px solid #e6e6f0; border-radius: 10px; padding: 10px 12px;"><div style="font-size: 10.5px; color: #595b78; margin-bottom: 5px;">KPI label</div><div style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: #b9bacb;">—</div></div>
+              <div style="border: 1px solid #e6e6f0; border-radius: 10px; padding: 10px 12px;"><div style="font-size: 10.5px; color: #595b78; margin-bottom: 5px;">KPI label</div><div style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: #b9bacb;">—</div></div>
+              <div style="border: 1px solid #e6e6f0; border-radius: 10px; padding: 10px 12px;"><div style="font-size: 10.5px; color: #595b78; margin-bottom: 5px;">KPI label</div><div style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: #b9bacb;">—</div></div>
+            </div>
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">Three steps before this dashboard reports</div>
+            <div style="display: flex; flex-direction: column; gap: 9px; margin-top: 12px;">
+              <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 18px; height: 18px; border-radius: 5px; background: #28a745; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex: none;">✓</span><span style="font-size: 13px; color: #8a8ca6; text-decoration: line-through;">Setup step one placeholder</span></div>
+              <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 18px; height: 18px; border-radius: 5px; border: 2px solid #0d08d2; box-sizing: border-box; flex: none;"></span><span style="font-size: 13px; font-weight: 500;">Setup step two placeholder</span></div>
+              <div style="display: flex; align-items: center; gap: 10px;"><span style="width: 18px; height: 18px; border-radius: 5px; border: 2px solid #dcdce8; box-sizing: border-box; flex: none;"></span><span style="font-size: 13px; color: #595b78;">Setup step three placeholder</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; font-weight: 600;">Chart · data unavailable</span>
+            <span style="font-size: 11.5px; color: #8a8ca6;">Last read HH:MM</span>
+          </div>
+          <div style="padding: 20px 16px 24px;">
+            <div style="display: inline-flex; align-items: center; gap: 7px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 4px 11px; font-size: 11.5px; font-weight: 600; margin-bottom: 14px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e63946;"></span>Unavailable</div>
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">Could not read the source</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 16px;">The last successful read was at HH:MM. Figures shown elsewhere on this screen may predate it.</div>
+            <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 36px; line-height: 1; display: inline-flex; align-items: center; background: #ffffff; color: #15162b; border: 1px solid #e6e6f0; border-radius: 8px; padding: 0 14px; font-size: 12.5px; font-weight: 600; cursor: pointer;" style-hover="background: #f7f7fb;">Retry</button>
+          </div>
+          <div style="padding: 0 16px 16px;"><div style="height: 58px; border: 1px dashed #dcdce8; border-radius: 8px; background: repeating-linear-gradient(135deg, #ffffff, #ffffff 8px, #fafafd 8px, #fafafd 16px);"></div></div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 13px; font-weight: 600;">Queue · cleared</span>
+            <span style="font-size: 11.5px; color: #8a8ca6;">0 items</span>
+          </div>
+          <div style="padding: 20px 16px 28px;">
+            <div style="display: inline-flex; align-items: center; gap: 7px; background: #e8f6eb; color: #1b7a31; border-radius: 999px; padding: 4px 11px; font-size: 11.5px; font-weight: 600; margin-bottom: 14px;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #28a745;"></span>Clear</div>
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 6px;">Nothing is owed by you</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78;">NN items are open on this project, all with other owners. This is a good empty state and it is allowed to look like one.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Say how many records exist when the view is filtered or restricted. The count is the fact.</div>
+          <div>Use a dash for a withheld or absent number, never a zero.</div>
+          <div>Timestamp the last successful read whenever data could be stale.</div>
+          <div>Let a cleared queue read as an achievement. Not every empty state is a problem.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Use one generic "No data" message for all six causes.</div>
+          <div>Show a zero where the real answer is "you may not see this".</div>
+          <div>Add an illustration, an icon set or encouraging copy. This audience reads it as evasion.</div>
+          <div>Collapse the container. A missing chart leaves its frame so the absence is visible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">11</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Agent states</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Eight states · one gold hairline · no animation</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">The full state set</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Section 06 locked the agent's principles and its two main screens. These are the states in between.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">An agent that cannot say "I don't know", "I'm not allowed to see that" or "this data is old" is not governable. Each state below exists so the agent can be honest about its own limits in a form an auditor would accept.</div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Design principles</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Every state is a header dot plus a sentence. The dot uses the locked status scale — green ready, gold working, red failed, grey inert — and the sentence carries a count or a timestamp wherever one exists. No spinner, no pulsing dots, no shimmer.</div>
+      </div>
+    </div>
+    <div style="padding: 22px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Layout rules</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">State lives in the header</strong>Dot and label in the panel header, never floating over the thread. The thread stays a record.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Progress is counted</strong>"Reading N of NN records" — a number that changes, not a bar that animates. Cancellable at any point.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Failures stay in the thread</strong>A refusal or an error is a message in the thread, not a toast. It is part of the audit record.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 20px;">Visual example — eight states, agent panel header and body</div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #1b7a31; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #28a745;"></span>Ready</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">01 · Ready</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78;">Idle and scoped. The header states the boundary: scoped to this record, NN records readable.</div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #8a6600; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>Working</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">02 · Working</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">A count, not a spinner. Cancellable while it runs.</div>
+            <div style="border: 1px solid #e6e6f0; border-radius: 8px; padding: 9px 11px; background: #fafafd; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 11.5px; color: #15162b;">Reading N of NN records</span>
+              <span style="font-size: 11px; font-weight: 600; color: #0d08d2;">Cancel</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #1b7a31; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #28a745;"></span>Answered</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">03 · Answered</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">Answer plus the records it read, as chips. Never an answer without sources.</div>
+            <div style="border-left: 2px solid #0d08d2; padding-left: 10px;">
+              <div style="font-size: 11.5px; line-height: 1.5; margin-bottom: 8px;">Answer body placeholder, two lines at this width.</div>
+              <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+                <span style="font-family: ui-monospace, monospace; font-size: 10px; font-weight: 600; color: #0d08d2; background: #e7e6fa; border-radius: 4px; padding: 2px 5px;">RK-0NN</span>
+                <span style="font-family: ui-monospace, monospace; font-size: 10px; font-weight: 600; color: #0d08d2; background: #e7e6fa; border-radius: 4px; padding: 2px 5px;">CO-0NN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #595b78; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #8a8ca6;"></span>No answer</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">04 · No answer possible</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">States what is missing and who could supply it. Never a guess.</div>
+            <div style="border-left: 2px solid #8a8ca6; padding-left: 10px; font-size: 11.5px; line-height: 1.5; color: #15162b;">The records needed to answer this are not in the register. Placeholder: name the missing input and its owner.</div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #8a6600; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>Restricted</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">05 · Blocked by permission</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">The agent inherits the user's access and says so plainly.</div>
+            <div style="border-left: 2px solid #e0a800; padding-left: 10px; font-size: 11.5px; line-height: 1.5; color: #15162b;">Answering would require records outside your access. NN records were excluded from this answer.</div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #8a6600; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>Stale</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">06 · Answering on stale data</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">Answers, but declares the age of what it read. The warning sits above the answer, not below.</div>
+            <div style="border: 1px solid #fdf4dd; background: #fdf4dd; border-radius: 8px; padding: 9px 11px; font-size: 11px; line-height: 1.45; color: #8a6600;">Last sync HH:MM. NN records may have changed since.</div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #b02a34; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e63946;"></span>Failed</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">07 · Failed</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">Stays in the thread as a record. Retry does not erase the failure.</div>
+            <div style="border-left: 2px solid #e63946; padding-left: 10px;">
+              <div style="font-size: 11.5px; line-height: 1.5; color: #15162b; margin-bottom: 8px;">Could not complete. Reference placeholder for support.</div>
+              <span style="font-size: 11px; font-weight: 600; color: #0d08d2;">Retry</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 11px 14px; border-top: 2px solid #ffcc00; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span style="font-size: 12px; font-weight: 600;">Agent name</span>
+            <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 600; color: #595b78; flex: none;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #8a8ca6;"></span>Off</span>
+          </div>
+          <div style="padding: 14px;">
+            <div style="font-size: 12.5px; font-weight: 600; margin-bottom: 6px;">08 · Disabled by tenant</div>
+            <div style="font-size: 12px; line-height: 1.55; color: #595b78; margin-bottom: 12px;">Some customers switch AI off. The panel stays, explains, and does not nag.</div>
+            <div style="border: 1px dashed #dcdce8; border-radius: 8px; padding: 9px 11px; font-size: 11px; line-height: 1.45; color: #8a8ca6; background: repeating-linear-gradient(135deg, #ffffff, #ffffff 8px, #fafafd 8px, #fafafd 16px);">Agent features are disabled for this tenant by your administrator.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>State how many records were excluded when access limits an answer. Silence looks like a full answer.</div>
+          <div>Put the stale-data warning above the answer. Below it, nobody reads it.</div>
+          <div>Keep failures and refusals in the thread so the exchange remains auditable.</div>
+          <div>Let the agent be switched off cleanly. Tenant control is a procurement requirement.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Animate the working state. A changing count is the only motion permitted.</div>
+          <div>Show errors as toasts that vanish. Nothing about the agent disappears.</div>
+          <div>Let the agent guess when records are missing. "No answer possible" is a valid, expected outcome.</div>
+          <div>Introduce a new colour for AI. The gold hairline is the only marker.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">12</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Board view</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">The Board toggle beside every register Table</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Columns are the four workflow stages</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Not custom lanes. The board is the register's four-stage rule turned sideways.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Show where work is stuck. A table answers "what is on the register"; a board answers "what has stopped moving, and in whose hands". It is a working view for a weekly control meeting, not a reporting view.</div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Design principles</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">The columns cannot be renamed, reordered or added to — they are the record type's four stages, so a board is directly comparable to its table and to every other module's board. Ageing is the board's headline signal: cards carry days-in-stage, and a column reports how many of its cards are stale.</div>
+      </div>
+    </div>
+    <div style="padding: 22px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Layout rules</div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Four columns, equal width</strong>Minimum 260px each. Column header carries the stage name, the count, and the stale count when above zero.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Card is five facts</strong>ID, severity, title, owner, days in stage. Nothing else fits and nothing else is needed to decide.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Drag writes an audit line</strong>Moving a card is a state change: it is attributed, timestamped, and can require a reason. Never a silent drag.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Forward only by default</strong>Backward moves are permitted but prompt for a reason, because a regression is a fact someone will ask about.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example</div>
+      <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(21,22,43,0.06);">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 18px;">
+          <div><div style="font-size: 19px; font-weight: 600;">Register name placeholder</div><div style="font-size: 12px; color: #8a8ca6; margin-top: 3px;">NN of NN items · grouped by stage</div></div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="display: flex; border: 1px solid #e6e6f0; border-radius: 8px; overflow: hidden;">
+              <span style="font-size: 12px; font-weight: 600; padding: 7px 12px; background: #e7e6fa; color: #0d08d2;">Board</span>
+              <span style="font-size: 12px; font-weight: 500; padding: 7px 12px; color: #595b78;">Table</span>
+            </div>
+            <span style="display: inline-flex; align-items: center; gap: 6px; border: 1px solid #e6e6f0; border-radius: 8px; padding: 6px 11px; font-size: 12px; color: #595b78;">Swimlane: none <span style="color: #b9bacb;">▾</span></span>
+            <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 34px; line-height: 1; display: inline-flex; align-items: center; background: #0d08d2; color: #ffffff; border: none; border-radius: 8px; padding: 0 14px; font-size: 12.5px; font-weight: 600; cursor: pointer;" style-hover="background: #070474;">+ New</button>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; align-items: start;">
+
+          <div style="background: #f7f7fb; border: 1px solid #e6e6f0; border-radius: 12px; padding: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78;">Stage one</span>
+              <span style="font-variant-numeric: tabular-nums; font-size: 11.5px; font-weight: 700; color: #15162b; background: #ffffff; border: 1px solid #e6e6f0; border-radius: 999px; padding: 1px 8px;">NN</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="background: #ffffff; border: 1px solid #e6e6f0; border-left: 3px solid #e63946; border-radius: 10px; padding: 12px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                  <span style="width: 8px; height: 8px; border-radius: 999px; background: #e63946;"></span>
+                </div>
+                <div style="font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 10px;">Record title placeholder, two lines at column width</div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #fff3e5; color: #b36200; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700;">AB</span><span style="font-size: 11.5px; color: #595b78;">Owner</span></span>
+                  <span style="font-variant-numeric: tabular-nums; font-size: 11px; font-weight: 700; color: #b02a34; background: #fdecee; border-radius: 999px; padding: 2px 7px;">NN d</span>
+                </div>
+              </div>
+              <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 10px; padding: 12px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                  <span style="width: 8px; height: 8px; border-radius: 999px; background: #e0a800;"></span>
+                </div>
+                <div style="font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 10px;">Record title placeholder</div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #e7e6fa; color: #0d08d2; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700;">CD</span><span style="font-size: 11.5px; color: #595b78;">Owner</span></span>
+                  <span style="font-variant-numeric: tabular-nums; font-size: 11px; font-weight: 600; color: #595b78;">N d</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #f7f7fb; border: 1px solid #e6e6f0; border-radius: 12px; padding: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78;">Stage two</span>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-size: 10.5px; font-weight: 700; color: #b02a34; background: #fdecee; border-radius: 999px; padding: 1px 7px;">N stale</span>
+                <span style="font-variant-numeric: tabular-nums; font-size: 11.5px; font-weight: 700; color: #15162b; background: #ffffff; border: 1px solid #e6e6f0; border-radius: 999px; padding: 1px 8px;">NN</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="background: #ffffff; border: 1px solid #e6e6f0; border-left: 3px solid #ff8b00; border-radius: 10px; padding: 12px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                  <span style="width: 8px; height: 8px; border-radius: 999px; background: #ff8b00;"></span>
+                </div>
+                <div style="font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 10px;">Record title placeholder, two lines at column width</div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700;">EF</span><span style="font-size: 11.5px; color: #595b78;">Owner</span></span>
+                  <span style="font-variant-numeric: tabular-nums; font-size: 11px; font-weight: 700; color: #b02a34; background: #fdecee; border-radius: 999px; padding: 2px 7px;">NN d</span>
+                </div>
+              </div>
+              <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 10px; padding: 12px; opacity: 0.55;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                  <span style="width: 8px; height: 8px; border-radius: 999px; background: #e0a800;"></span>
+                </div>
+                <div style="font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 10px;">Card being dragged — source position holds its place</div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #f0f0f5; color: #595b78; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700;">GH</span><span style="font-size: 11.5px; color: #595b78;">Owner</span></span>
+                  <span style="font-variant-numeric: tabular-nums; font-size: 11px; font-weight: 600; color: #595b78;">N d</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #e7e6fa; border: 2px dashed #0d08d2; border-radius: 12px; padding: 11px; box-sizing: border-box;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0d08d2;">Stage three</span>
+              <span style="font-variant-numeric: tabular-nums; font-size: 11.5px; font-weight: 700; color: #0d08d2; background: #ffffff; border: 1px solid #0d08d2; border-radius: 999px; padding: 1px 8px;">NN</span>
+            </div>
+            <div style="border: 2px dashed #0d08d2; border-radius: 10px; padding: 14px 12px; background: #ffffff; margin-bottom: 10px;">
+              <div style="font-size: 12px; font-weight: 600; color: #0d08d2; margin-bottom: 4px;">Drop to move to stage three</div>
+              <div style="font-size: 11px; line-height: 1.45; color: #595b78;">Writes an audit line: who moved it, from where, at what time.</div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 10px; padding: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                <span style="width: 8px; height: 8px; border-radius: 999px; background: #e0a800;"></span>
+              </div>
+              <div style="font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 10px;">Record title placeholder</div>
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #e7e6fa; color: #0d08d2; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700;">IJ</span><span style="font-size: 11.5px; color: #595b78;">Owner</span></span>
+                <span style="font-variant-numeric: tabular-nums; font-size: 11px; font-weight: 600; color: #595b78;">N d</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #f7f7fb; border: 1px solid #e6e6f0; border-radius: 12px; padding: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78;">Stage four</span>
+              <span style="font-variant-numeric: tabular-nums; font-size: 11.5px; font-weight: 700; color: #15162b; background: #ffffff; border: 1px solid #e6e6f0; border-radius: 999px; padding: 1px 8px;">NN</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="background: #ffffff; border: 1px solid #e6e6f0; border-left: 3px solid #28a745; border-radius: 10px; padding: 12px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-family: ui-monospace, monospace; font-size: 11px; font-weight: 600; color: #595b78;">RK-0NN</span>
+                  <span style="width: 8px; height: 8px; border-radius: 999px; background: #28a745;"></span>
+                </div>
+                <div style="font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 10px;">Resolved record placeholder title</div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700;">KL</span><span style="font-size: 11.5px; color: #595b78;">Owner</span></span>
+                  <span style="font-size: 11px; font-weight: 600; color: #1b7a31;">Closed</span>
+                </div>
+              </div>
+              <div style="border: 1px dashed #dcdce8; border-radius: 10px; padding: 14px 12px; background: repeating-linear-gradient(135deg, #ffffff, #ffffff 8px, #fafafd 8px, #fafafd 16px); font-size: 11.5px; line-height: 1.45; color: #8a8ca6;">Resolved cards leave the board after NN days and remain in the table.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Show days-in-stage on every card, and turn it red only past the stage's own threshold.</div>
+          <div>Report the stale count in the column header. A column of eight where five are stale is the finding.</div>
+          <div>Offer swimlanes by workstream or by organisation. Both answer "whose queue is blocked".</div>
+          <div>Keep the source position visible while a card is dragged, at reduced opacity.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Allow custom columns. The four stages are the record type's contract with every other view.</div>
+          <div>Let a drag change state silently. Every move is attributed and logged like any other edit.</div>
+          <div>Colour whole cards by severity. The left border and the dot carry it, as in the register.</div>
+          <div>Keep resolved cards on the board indefinitely — the board is for work in motion.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">13</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Operational workflow states</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Stage is where · state is how it is going</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Two independent axes</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">The four-stage rule is untouched. These states sit across it, not inside it.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">A record at stage three can be running normally, waiting on a third party, formally on hold, escalated, or superseded. All five look identical on the stepper. Without a second axis the register cannot distinguish work that is progressing from work that has stopped, and the whole control claim fails.</div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Design principles</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Nine states, one visible at a time, chosen by a fixed precedence so two people reading the same record never see a different label. Six use the locked status scale; three are neutral because they are administrative, not conditions. Every non-normal state requires a reason and an owner before it can be applied.</div>
+      </div>
+    </div>
+    <div style="padding: 24px; background: #f2f2f7; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — the nine states</div>
+      <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; background: #fafafd; border-bottom: 1px solid #e6e6f0; padding: 10px 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595b78;">
+          <div>Prec.</div><div>State</div><div>Means</div><div>Requires</div><div>Clock</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">1</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #e63946;"></span>Escalated</span></div>
+          <div style="color: #595b78;">Raised above the normal owner because it is stuck or material. Outranks every other state.</div>
+          <div style="color: #595b78;">Reason, escalated-to person, date</div>
+          <div style="color: #595b78;">Runs</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">2</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #e63946;"></span>Overdue</span></div>
+          <div style="color: #595b78;">Past its due date or contractual reply date, still in play.</div>
+          <div style="color: #595b78;">Nothing — derived from the date</div>
+          <div style="color: #595b78;">Runs</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">3</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Awaiting external</span></div>
+          <div style="color: #595b78;">Blocked on a party outside the project — authority, supplier, regulator.</div>
+          <div style="color: #595b78;">Named party, expected date</div>
+          <div style="color: #595b78;">Runs</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">4</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #fdf4dd; color: #8a6600; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #e0a800;"></span>On hold</span></div>
+          <div style="color: #595b78;">Deliberately paused by a decision. Different from blocked: someone chose this.</div>
+          <div style="color: #595b78;">Reason, approver, review date</div>
+          <div style="color: #595b78; font-weight: 600;">Paused</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">5</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #f0f0f5; color: #595b78; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #8a8ca6;"></span>Draft</span></div>
+          <div style="color: #595b78;">Created but not submitted. Visible only to its author and does not count in register totals.</div>
+          <div style="color: #595b78;">Nothing</div>
+          <div style="color: #595b78;">Not started</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">6</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #e7e6fa; color: #0d08d2; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #0d08d2;"></span>Reopened</span></div>
+          <div style="color: #595b78;">Closed then reopened. Carries its previous close date so the gap is visible.</div>
+          <div style="color: #595b78;">Reason, previous close date</div>
+          <div style="color: #595b78;">Restarts</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">7</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #ffffff; color: #595b78; border: 1px solid #e6e6f0; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;">In progress</span></div>
+          <div style="color: #595b78;">The normal state. Shows no badge at all — silence means healthy.</div>
+          <div style="color: #595b78;">Nothing</div>
+          <div style="color: #595b78;">Runs</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">8</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #f0f0f5; color: #595b78; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600; text-decoration: line-through;">Superseded</span></div>
+          <div style="color: #595b78;">Replaced by another record. Read-only, and links forward to its replacement.</div>
+          <div style="color: #595b78;">Successor record ID</div>
+          <div style="color: #595b78;">Stopped</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 0.5fr 1.5fr 2.4fr 1.5fr 1.1fr; align-items: center; padding: 13px 20px; font-size: 13px;">
+          <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">9</div>
+          <div><span style="display: inline-flex; align-items: center; gap: 7px; background: #e8f6eb; color: #1b7a31; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #28a745;"></span>Closed</span></div>
+          <div style="color: #595b78;">Stage four reached and signed off. Read-only, stays in the register permanently.</div>
+          <div style="color: #595b78;">Sign-off person, date</div>
+          <div style="color: #595b78;">Stopped</div>
+        </div>
+      </div>
+      <div style="margin-top: 14px; font-size: 12.5px; line-height: 1.6; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Precedence.</strong> A record can satisfy several of these at once. The lowest-numbered state is the one displayed, so an escalated record that is also overdue and awaiting an authority reads as Escalated. The others remain visible in the record panel's state block, never lost — only the badge is singular.</div>
+    </div>
+    <div style="padding: 24px; background: #f2f2f7; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — how the state reads in each view</div>
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; align-items: start;">
+        <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; font-size: 13px; font-weight: 600;">In the register — badge sits after the title, never replacing the stage</div>
+          <div style="display: grid; grid-template-columns: 74px 2.4fr 1.5fr 1fr 1fr; background: #fafafd; border-bottom: 1px solid #e6e6f0; padding: 9px 16px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595b78;">
+            <div>ID</div><div>Title</div><div>State</div><div>Stage</div><div>Due</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 74px 2.4fr 1.5fr 1fr 1fr; align-items: center; padding: 11px 16px; border-bottom: 1px solid #f0f0f5; font-size: 12.5px;">
+            <div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #595b78;">RK-0NN</div>
+            <div style="font-weight: 500; padding-right: 12px;">Record title placeholder</div>
+            <div><span style="display: inline-flex; align-items: center; gap: 6px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 3px 9px; font-size: 11px; font-weight: 600;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e63946;"></span>Escalated</span></div>
+            <div style="color: #595b78;">Stage three</div>
+            <div style="font-variant-numeric: tabular-nums; color: #e63946; font-weight: 600;">DD Mon</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 74px 2.4fr 1.5fr 1fr 1fr; align-items: center; padding: 11px 16px; border-bottom: 1px solid #f0f0f5; font-size: 12.5px; background: #fafafd;">
+            <div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #595b78;">RK-0NN</div>
+            <div style="font-weight: 500; padding-right: 12px;">Record title placeholder</div>
+            <div><span style="display: inline-flex; align-items: center; gap: 6px; background: #fdf4dd; color: #8a6600; border-radius: 999px; padding: 3px 9px; font-size: 11px; font-weight: 600;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>On hold</span></div>
+            <div style="color: #595b78;">Stage two</div>
+            <div style="font-variant-numeric: tabular-nums; color: #8a8ca6;">Paused</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 74px 2.4fr 1.5fr 1fr 1fr; align-items: center; padding: 11px 16px; border-bottom: 1px solid #f0f0f5; font-size: 12.5px;">
+            <div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #595b78;">RK-0NN</div>
+            <div style="font-weight: 500; padding-right: 12px;">Record title placeholder</div>
+            <div style="color: #b9bacb; font-size: 11.5px;">—</div>
+            <div style="color: #595b78;">Stage two</div>
+            <div style="font-variant-numeric: tabular-nums; color: #15162b;">DD Mon</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 74px 2.4fr 1.5fr 1fr 1fr; align-items: center; padding: 11px 16px; font-size: 12.5px; background: #fafafd;">
+            <div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #8a8ca6;">RK-0NN</div>
+            <div style="font-weight: 500; padding-right: 12px; color: #8a8ca6; text-decoration: line-through;">Record title placeholder</div>
+            <div><span style="display: inline-flex; align-items: center; gap: 6px; background: #f0f0f5; color: #595b78; border-radius: 999px; padding: 3px 9px; font-size: 11px; font-weight: 600;">Superseded</span></div>
+            <div style="color: #8a8ca6;">Stage two</div>
+            <div style="font-family: ui-monospace, monospace; font-size: 11px; color: #0d08d2;">→ RK-0NN</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="background: #ffffff; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+            <div style="padding: 12px 16px; border-bottom: 1px solid #e6e6f0; font-size: 13px; font-weight: 600;">In the record — the state block</div>
+            <div style="padding: 14px 16px;">
+              <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 4px 10px; font-size: 11.5px; font-weight: 700;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e63946;"></span>Escalated</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #595b78; border: 1px solid #e6e6f0; border-radius: 999px; padding: 4px 10px; font-size: 11.5px; font-weight: 500;">Also overdue NN d</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #595b78; border: 1px solid #e6e6f0; border-radius: 999px; padding: 4px 10px; font-size: 11.5px; font-weight: 500;">Also awaiting external</span>
+              </div>
+              <div style="font-size: 12px; line-height: 1.55; color: #595b78; border-top: 1px solid #f0f0f5; padding-top: 12px;">One badge leads, the rest are stated. The reason and the person who applied the leading state appear directly beneath, and the change is written to the audit trail.</div>
+            </div>
+          </div>
+          <div style="background: #070474; border-radius: 12px; padding: 18px 20px; color: #ffffff;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 10px;">Why silence matters</div>
+            <div style="font-size: 13px; line-height: 1.6;">"In progress" shows no badge. On a register of two hundred rows, every badge is an exception — so the eye counts problems, not records. A system that labels everything labels nothing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Require a reason and an owner before any non-normal state can be applied.</div>
+          <div>Stop the clock on hold, and show that it is stopped rather than showing a stale count.</div>
+          <div>Link a superseded record forward to its successor, and keep it readable.</div>
+          <div>Show secondary states as plain outline chips beside the leading badge.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Add these to the stepper as extra stages. The four-stage rule is locked.</div>
+          <div>Show two badges in a register row. One leads, by precedence.</div>
+          <div>Delete a superseded or closed record. Nothing leaves the ledger.</div>
+          <div>Label the healthy majority. In progress is the absence of a badge.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">14</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Lock tracker</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Completion set · sections 09–13</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; background: #fafafd; border-bottom: 1px solid #e6e6f0; padding: 11px 24px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595b78;">
+      <div>Sect.</div><div>Component</div><div>Extends</div><div>Status</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">09</div><div style="font-weight: 500;">Mobile scope &amp; navigation</div><div style="color: #595b78; font-size: 12.5px;">App shell (01)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">09</div><div style="font-weight: 500;">Mobile queue screen</div><div style="color: #595b78; font-size: 12.5px;">Register anatomy (03)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">09</div><div style="font-weight: 500;">Mobile record screen</div><div style="color: #595b78; font-size: 12.5px;">Record panel (04)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">09</div><div style="font-weight: 500;">Mobile raise flow</div><div style="color: #595b78; font-size: 12.5px;">Severity badge (Step 1)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">10</div><div style="font-weight: 500;">Six empty-state causes</div><div style="color: #595b78; font-size: 12.5px;">Register + dashboard (02, 03)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">11</div><div style="font-weight: 500;">Eight agent states</div><div style="color: #595b78; font-size: 12.5px;">Agent system (06)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">12</div><div style="font-weight: 500;">Board view &amp; card</div><div style="color: #595b78; font-size: 12.5px;">Four-stage rule (04)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">12</div><div style="font-weight: 500;">Drag &amp; audit rules</div><div style="color: #595b78; font-size: 12.5px;">Audit trail (05)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">13</div><div style="font-weight: 500;">Nine operational states</div><div style="color: #595b78; font-size: 12.5px;">Status scale (Step 1)</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">13</div><div style="font-weight: 500;">State precedence order</div><div style="color: #595b78; font-size: 12.5px;">Register + record + board</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="padding: 18px 24px; border-top: 1px solid #e6e6f0; background: #f7f7fb; font-size: 13px; line-height: 1.6; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Coverage.</strong> With these ten locked, the Product Design System covers every surface a future module needs: shell, dashboard, register, board, record, mobile, agent, empty states and operational states. A new module is assembled from them — it should not require new patterns.</div>
+  </div>
+
+  <div style="background: #070474; border-radius: 16px; padding: 32px 36px; color: #ffffff;">
+    <div style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.1; margin-bottom: 18px;">Three decisions for <span style="color: #ffcc00;">Henning</span></div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;"><div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">01 · Mobile scope</div><div style="font-size: 13.5px; line-height: 1.55;">Mobile carries the queue, the record and one raise flow — no registers, no dashboards, no matrix. That is a real limitation. Confirm it, or name the one thing missing from it.</div></div>
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;"><div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">02 · State precedence</div><div style="font-size: 13.5px; line-height: 1.55;">Escalated outranks Overdue, which outranks Awaiting external, which outranks On hold. If your buyers read that order differently, this is the moment to reorder it — every view depends on it.</div></div>
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;"><div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">03 · Backward drags</div><div style="font-size: 13.5px; line-height: 1.55;">A card can be dragged back a stage if a reason is given. The stricter alternative is to forbid it entirely and require a reopen. Say which your governance story needs.</div></div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

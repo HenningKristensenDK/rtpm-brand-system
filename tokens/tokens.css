@@ -1,0 +1,254 @@
+/* ==========================================================================
+   RTPM Brand System v4 — design tokens
+   Source of truth. Extracted from:
+     RTPM 0. Product Design System
+     RTPM 1. Core Tokens          (colour, type, spacing, radius are locked here)
+     RTPM 2. Marketing Graphics
+     RTPM 3. Completion Surfaces
+     RTPM 4. Website Architecture
+
+   Scope: web-facing surfaces — marketing site, rtpm.dk, React product demo
+   and next-gen frontend. Not the Power Apps / SharePoint delivery product.
+
+   Two layers:
+     1. PRIMITIVES  --rtpm-*        raw values. Never used directly in a component.
+     2. SEMANTICS   --color-*, etc. what components consume.
+
+   Rule: a component may only reference layer 2. If a component needs a value
+   that layer 2 does not express, the token set is missing something — add it
+   here, do not inline a hex.
+
+   Entries marked [UNRATIFIED] appear in the five source files but were never
+   declared as tokens in RTPM 1. They are captured so nothing silently drifts,
+   and are listed in tokens/README.md for a decision.
+   ========================================================================== */
+
+:root {
+
+  /* ======================================================================
+     1. PRIMITIVES
+     ====================================================================== */
+
+  /* --- Brand blues ---------------------------------------------------- */
+  --rtpm-ink-navy:          #070474;  /* dark surface + logo colour on light */
+  --rtpm-indigo:            #0D08D2;  /* signal only, never a large fill */
+  --rtpm-indigo-hover:      #0A06A8;
+  --rtpm-navy-label:        #CFCEFF;  /* eyebrow / label on Ink Navy */
+  --rtpm-navy-mute:         #6F6DC9;  /* [UNRATIFIED] sidebar group labels on navy */
+  /* Retired, do not reintroduce: #2E2CA1, #0A0868 (sampling artifacts) */
+
+  /* --- Accent --------------------------------------------------------- */
+  --rtpm-gold:              #FFCC00;  /* primary action ONLY, one per screen */
+  --rtpm-gold-hover:        #F2C200;
+
+  /* --- Ink and neutrals ----------------------------------------------- */
+  --rtpm-ink:               #15162B;  /* all text on light; never pure black */
+  --rtpm-slate:             #595B78;  /* secondary text, AA on white */
+  --rtpm-mute:              #8A8CA6;  /* 3.3:1 — large text and non-text only */
+  --rtpm-mute-soft:         #B9BACB;  /* disabled label, dashed guide */
+  --rtpm-white:             #FFFFFF;
+  --rtpm-paper:             #F7F7FB;  /* page */
+  --rtpm-mist:              #FAFAFD;  /* [UNRATIFIED] inset / nested surface */
+  --rtpm-line:              #E6E6F0;  /* border */
+  --rtpm-line-soft:         #F0F0F5;  /* inner rule inside a card — sole meaning */
+  --rtpm-disabled-bg:       #F2F2F7;
+  --rtpm-indigo-tint:       #E7E6FA;
+  --rtpm-indigo-tint-line:  #D6D4F5;
+  --rtpm-black:             #000000;  /* monochrome logo reproduction only */
+
+  /* --- Status scale — fixed meaning, never repurposed ------------------ */
+  --rtpm-red:               #E63946;  /* Critical */
+  --rtpm-orange:            #FF8B00;  /* High */
+  --rtpm-amber:             #E0A800;  /* Medium — NOT #FFCC00 */
+  --rtpm-green:             #28A745;  /* Low / Done */
+  --rtpm-grey:              #E6E6F0;  /* Not started / remainder (charts) */
+  --rtpm-grey-line:         #DCDCE8;  /* border on the chart remainder fill */
+
+  /* Status tints — pill background + accessible label pair */
+  --rtpm-red-tint:          #FDECEE;
+  --rtpm-red-ink:           #B02A34;
+  --rtpm-orange-tint:       #FFF3E5;
+  --rtpm-orange-ink:        #B36200;
+  --rtpm-amber-tint:        #FDF4DD;
+  --rtpm-amber-ink:         #8A6600;
+  --rtpm-green-tint:        #E8F6EB;
+  --rtpm-green-ink:         #1B7A31;
+
+  /* --- Chart category sequence — fixed order, max five, no sixth ------- */
+  --rtpm-series-1:          #0D08D2;
+  --rtpm-series-2:          #00C794;
+  --rtpm-series-3:          #FF8B00;
+  --rtpm-series-4:          #00ACFF;
+  --rtpm-series-5:          #AA00D3;
+  --rtpm-series-alt:        #5652E0;  /* [UNRATIFIED] used in RTPM 0 bar charts,
+                                         not one of the five locked series */
+
+  /* --- Type ------------------------------------------------------------ */
+  --rtpm-font-display:      'Barlow Semi Condensed', sans-serif;
+  --rtpm-font-ui:           Inter, sans-serif;
+  --rtpm-font-mono:         ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Montserrat is retired. No substitution for either family. */
+
+  --rtpm-weight-regular:    400;
+  --rtpm-weight-medium:     500;
+  --rtpm-weight-semibold:   600;
+  --rtpm-weight-bold:       700;
+
+  /* --- Spacing grid ---------------------------------------------------- */
+  --rtpm-space-1:            4px;
+  --rtpm-space-2:            8px;
+  --rtpm-space-3:           12px;
+  --rtpm-space-4:           16px;
+  --rtpm-space-6:           24px;
+  --rtpm-space-8:           32px;
+
+  /* --- Radius ---------------------------------------------------------- */
+  --rtpm-radius-card:       14px;
+  --rtpm-radius-input:       9px;
+  --rtpm-radius-pill:      999px;
+  --rtpm-radius-sharp:        0;   /* the mark and its pictograms */
+
+  /* --- Elevation ------------------------------------------------------- */
+  --rtpm-shadow-hairline:   0 1px 2px rgba(21, 22, 43, 0.10);
+  --rtpm-shadow-raised:     0 2px 8px rgba(21, 22, 43, 0.08);
+  --rtpm-shadow-overlay:    0 8px 24px rgba(21, 22, 43, 0.12);
+
+
+  /* ======================================================================
+     2. SEMANTIC ALIASES — the layer components consume
+     ====================================================================== */
+
+  /* --- Surface --------------------------------------------------------- */
+  --color-surface-page:       var(--rtpm-paper);
+  --color-surface-card:       var(--rtpm-white);
+  --color-surface-inset:      var(--rtpm-mist);
+  --color-surface-dark:       var(--rtpm-ink-navy);   /* the only dark surface */
+  --color-surface-selected:   var(--rtpm-indigo-tint);
+  --color-surface-disabled:   var(--rtpm-disabled-bg);
+
+  /* --- Text ------------------------------------------------------------ */
+  --color-text-primary:       var(--rtpm-ink);        /* 16.63:1 on page, AAA */
+  --color-text-secondary:     var(--rtpm-slate);      /*  6.58:1 on card, AA  */
+  --color-text-muted:         var(--rtpm-mute);       /* never body copy */
+  --color-text-disabled:      var(--rtpm-mute-soft);
+  --color-text-on-dark:       var(--rtpm-white);      /* 16.42:1 on navy, AAA */
+  --color-text-on-dark-muted: var(--rtpm-navy-label);
+  --color-text-link:          var(--rtpm-indigo);
+  --color-text-link-hover:    var(--rtpm-ink-navy);
+
+  /* --- Border ---------------------------------------------------------- */
+  --color-border-default:     var(--rtpm-line);
+  --color-border-subtle:      var(--rtpm-line-soft);
+  --color-border-selected:    var(--rtpm-indigo);
+  --color-border-tint:        var(--rtpm-indigo-tint-line);
+  --color-border-on-dark:     rgba(255, 255, 255, 0.22);
+
+  /* --- Signal ---------------------------------------------------------- */
+  --color-signal:             var(--rtpm-indigo);     /* active, hairline, node */
+  --color-focus-ring:         var(--rtpm-indigo-tint);
+
+  /* --- Action ---------------------------------------------------------- */
+  --color-action-primary-bg:        var(--rtpm-gold);
+  --color-action-primary-bg-hover:  var(--rtpm-gold-hover);
+  --color-action-primary-text:      var(--rtpm-ink);  /* ink, never white */
+  --color-action-secondary-bg:      var(--rtpm-indigo);
+  --color-action-secondary-bg-hover:var(--rtpm-indigo-hover);
+  --color-action-secondary-text:    var(--rtpm-white);
+  --color-action-tertiary-bg:       var(--rtpm-white);
+  --color-action-tertiary-bg-hover: var(--rtpm-paper);
+  --color-action-tertiary-text:     var(--rtpm-ink);
+  --color-action-ghost-text:        var(--rtpm-indigo);
+  --color-action-ghost-bg-hover:    var(--rtpm-indigo-tint);
+  --color-action-disabled-bg:       var(--rtpm-disabled-bg);
+  --color-action-disabled-text:     var(--rtpm-mute-soft);
+
+  /* --- Status ---------------------------------------------------------- */
+  --color-status-critical:      var(--rtpm-red);
+  --color-status-critical-bg:   var(--rtpm-red-tint);
+  --color-status-critical-text: var(--rtpm-red-ink);
+  --color-status-high:          var(--rtpm-orange);
+  --color-status-high-bg:       var(--rtpm-orange-tint);
+  --color-status-high-text:     var(--rtpm-orange-ink);
+  --color-status-medium:        var(--rtpm-amber);
+  --color-status-medium-bg:     var(--rtpm-amber-tint);
+  --color-status-medium-text:   var(--rtpm-amber-ink);
+  --color-status-low:           var(--rtpm-green);
+  --color-status-low-bg:        var(--rtpm-green-tint);
+  --color-status-low-text:      var(--rtpm-green-ink);
+  --color-status-none:          var(--rtpm-grey);
+
+  /* --- Stepper --------------------------------------------------------- */
+  --color-step-done:          var(--rtpm-green);
+  --color-step-current:       var(--rtpm-indigo);
+  --color-step-current-ring:  var(--rtpm-indigo-tint);
+  --color-step-pending:       var(--rtpm-line);
+  --color-step-overdue:       var(--rtpm-red);
+  --color-step-overdue-ring:  rgba(230, 57, 70, 0.14);
+
+  /* --- Chart ------------------------------------------------------------
+     A chart uses the category sequence OR the status scale. Never both. */
+  --color-chart-1:            var(--rtpm-series-1);
+  --color-chart-2:            var(--rtpm-series-2);
+  --color-chart-3:            var(--rtpm-series-3);
+  --color-chart-4:            var(--rtpm-series-4);
+  --color-chart-5:            var(--rtpm-series-5);
+  --color-chart-empty:        var(--rtpm-grey);
+  --color-chart-empty-line:   var(--rtpm-grey-line);
+
+  /* --- Type roles -------------------------------------------------------
+     Display is marketing, decks, carousels, thumbnails. Never app UI. */
+  --font-display:             var(--rtpm-font-display);
+  --font-ui:                  var(--rtpm-font-ui);
+  --font-numeric:             var(--rtpm-font-ui);
+
+  --type-display-size:        52px;
+  --type-display-weight:      var(--rtpm-weight-bold);
+  --type-display-leading:     1.08;
+  --type-display-tracking:    -0.005em;
+
+  --type-subhead-size:        26px;
+  --type-subhead-weight:      var(--rtpm-weight-semibold);
+  --type-subhead-leading:     1.15;
+
+  --type-ui-title-size:       16px;
+  --type-ui-title-weight:     var(--rtpm-weight-semibold);
+
+  --type-body-size:           14px;
+  --type-body-weight:         var(--rtpm-weight-regular);
+  --type-body-leading:        1.5;
+
+  --type-label-size:          13px;
+  --type-label-weight:        var(--rtpm-weight-medium);
+  --type-label-tracking:      0.02em;
+
+  --type-eyebrow-size:        12px;
+  --type-eyebrow-weight:      var(--rtpm-weight-semibold);
+  --type-eyebrow-tracking:    0.1em;
+
+  --type-caption-size:        12px;
+
+  /* --- Control sizing ---------------------------------------------------- */
+  --size-control-height:      40px;
+  --radius-card:              var(--rtpm-radius-card);
+  --radius-control:           var(--rtpm-radius-input);
+  --radius-pill:              var(--rtpm-radius-pill);
+
+  /* --- Icons — sharp corners, monoline, 1.5px stroke, no library sets --- */
+  --icon-stroke:              1.5px;
+  --icon-size-sm:             16px;   /* collapsed rail, table rows */
+  --icon-size-md:             20px;   /* expanded sidebar */
+  --icon-size-lg:             24px;   /* cards, standalone */
+
+  /* --- Logo construction — every dimension is a ratio of icon height x --- */
+  --logo-wordmark-ratio:      0.88;   /* lockups A and B */
+  --logo-wordmark-tracking:   -0.034em;
+  --logo-gap-ratio:           0.28;
+  --logo-descriptor-ratio:    0.25;   /* Inter 500, 10px floor */
+  --logo-realtime-ratio:      0.95;
+  --logo-realtime-tracking:   -0.012em;
+  --logo-realtime-gap:        0.36;
+  --logo-clearspace-ratio:    0.5;    /* 1.0 over a photograph */
+  --logo-min-lockup-a:        16px;
+  --logo-min-lockup-b:        40px;
+  --logo-min-icon:            16px;
+}

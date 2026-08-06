@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #f7f7fb; -webkit-font-smoothing: antialiased; }
+  a { color: #0d08d2; text-decoration: none; }
+  a:hover { color: #070474; text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: Inter, sans-serif; color: #15162b; background: #f7f7fb; padding: 56px 64px 96px; max-width: 1440px; margin: 0 auto;">
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; border-bottom: 1px solid #e6e6f0; padding-bottom: 24px; margin-bottom: 48px;">
+    <div>
+      <div style="font-family: Inter, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">RTPM Brand System v4 · Step 1 of 4 · Foundations</div>
+      <h1 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 56px; line-height: 1.05; margin: 0; letter-spacing: -0.01em;">Core tokens &amp; system badges</h1>
+      <p style="font-size: 15px; line-height: 1.5; color: #595b78; margin: 12px 0 0; max-width: 640px;">The elements that repeat on every surface and are hardest to change later. Each block below is a candidate for LOCK. Nothing here is decorative.</p>
+    </div>
+    <div style="flex: none; display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
+      <div style="display: flex; align-items: center; gap: 8px; background: #ffffff; border: 1px solid #e6e6f0; border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 600; color: #595b78;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #ff8b00; display: inline-block;"></span>Awaiting Henning's review</div>
+      <div style="font-size: 12px; color: #8a8ca6;">2026.08.04</div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">01</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">Colour — locked proposal</h2>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 720px;">Two blues only. The sampled range <code style="font-family: ui-monospace, monospace; font-size: 13px; background: #ffffff; border: 1px solid #e6e6f0; border-radius: 4px; padding: 1px 5px;">#0A0868–#2E2CA1</code> collapses to Ink Navy for surface and Primary Indigo for signal. Anything between them is a sampling artifact and is retired.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 116px; background: #070474;"></div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">Ink Navy</div>
+        <div style="font-family: ui-monospace, monospace; font-size: 13px; color: #595b78; margin-top: 3px;">#070474</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">Dark surfaces: sidebar, hero band, footer, media overlay. Logo colour on light.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 116px; background: #0d08d2;"></div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">Primary Indigo</div>
+        <div style="font-family: ui-monospace, monospace; font-size: 13px; color: #595b78; margin-top: 3px;">#0D08D2</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">Signal only: active states, key nodes, hairlines, links, first chart series. Never a large fill.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 116px; background: #ffcc00;"></div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">Accent Gold</div>
+        <div style="font-family: ui-monospace, monospace; font-size: 13px; color: #595b78; margin-top: 3px;">#FFCC00</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">One primary action per screen. One highlight per visual — a single contiguous span, on dark only.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 116px; background: #15162b;"></div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">Ink</div>
+        <div style="font-family: ui-monospace, monospace; font-size: 13px; color: #595b78; margin-top: 3px;">#15162B</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">All body and heading text on light. Never pure black.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Surfaces &amp; neutrals</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #f7f7fb; border: 1px solid #e6e6f0; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Page</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#F7F7FB</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #ffffff; border: 1px solid #e6e6f0; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Card</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#FFFFFF</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #e6e6f0; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Border</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#E6E6F0</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #e7e6fa; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Indigo tint</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#E7E6FA</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #595b78; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Text secondary</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#595B78</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #8a8ca6; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Muted / icon</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#8A8CA6</span></div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Status scale — fixed meaning</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #e63946; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Critical</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#E63946</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #ff8b00; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">High</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#FF8B00</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #e0a800; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Medium</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#E0A800</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #28a745; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Low / Done</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#28A745</span></div>
+      </div>
+      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e6e6f0; font-size: 12.5px; line-height: 1.5; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Locked.</strong> Medium status is <code style="font-family: ui-monospace, monospace;">#E0A800</code>, not <code style="font-family: ui-monospace, monospace;">#FFCC00</code>. Gold means primary action and nothing else — two meanings cannot share a hex. #E0A800 is a darker amber-gold, legible on white and clearly not a button.</div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 6px;">Surfaces — extended</div>
+      <div style="font-size: 12.5px; line-height: 1.5; color: #8a8ca6; margin-bottom: 14px;">In constant use across the system. Declared here so there is a rule to follow.</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #fafafd; border: 1px solid #e6e6f0; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Inset</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#FAFAFD</span><span style="font-size: 12.5px; color: #8a8ca6;">Nested surface inside a card</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #f0f0f5; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Rule, inner</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#F0F0F5</span><span style="font-size: 12.5px; color: #8a8ca6;">Hairline inside a card</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #e7e6fa; border: 1px solid #d6d4f5; box-sizing: border-box; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Tint border</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#D6D4F5</span><span style="font-size: 12.5px; color: #8a8ca6;">Border on an Indigo tint fill</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #f2f2f7; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Disabled fill</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#F2F2F7</span><span style="font-size: 12.5px; color: #8a8ca6;">Disabled control background</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #b9bacb; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Disabled label</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#B9BACB</span><span style="font-size: 12.5px; color: #8a8ca6;">Disabled text; dashed guides</span></div>
+      </div>
+      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e6e6f0; font-size: 12.5px; line-height: 1.5; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Collision resolved.</strong> <code style="font-family: ui-monospace, monospace;">#F0F0F5</code> is the inner hairline rule only. The chart "not started / remainder" grey moves to <code style="font-family: ui-monospace, monospace;">#E6E6F0</code> — a fill can afford a step darker, and it then matches the pending stepper node. Two meanings cannot share a hex, the same reasoning that moved Medium off <code style="font-family: ui-monospace, monospace;">#FFCC00</code>.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 6px;">Status tints</div>
+      <div style="font-size: 12.5px; line-height: 1.5; color: #8a8ca6; margin-bottom: 14px;">Every status needs a pill background and an accessible label, or each pill is improvised.</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-flex; align-items: center; gap: 7px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600; width: 88px; box-sizing: border-box;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e63946;"></span>Critical</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#FDECEE</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#B02A34</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600; width: 88px; box-sizing: border-box;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #ff8b00;"></span>High</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#FFF3E5</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#B36200</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-flex; align-items: center; gap: 7px; background: #fdf4dd; color: #8a6600; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600; width: 88px; box-sizing: border-box;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #e0a800;"></span>Medium</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#FDF4DD</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#8A6600</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="display: inline-flex; align-items: center; gap: 7px; background: #e8f6eb; color: #1b7a31; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600; width: 88px; box-sizing: border-box;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #28a745;"></span>Low</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#E8F6EB</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#1B7A31</span></div>
+      </div>
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin: 20px 0 12px;">Hover states</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #f2c200; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Gold hover</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#F2C200</span><span style="font-size: 12.5px; color: #8a8ca6;">Primary action, hover</span></div>
+        <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 28px; height: 28px; border-radius: 6px; background: #0a06a8; flex: none;"></span><span style="font-size: 13px; font-weight: 500; width: 96px;">Indigo hover</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78; width: 68px;">#0A06A8</span><span style="font-size: 12.5px; color: #8a8ca6;">Secondary action, hover</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px; margin-bottom: 24px;">
+    <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Contrast requirements</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+          <span style="width: 64px; height: 40px; border-radius: 6px; background: #f7f7fb; border: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #15162b; flex: none;">Aa</span>
+          <div><div style="font-size: 13px; font-weight: 600;">Ink on Page</div><div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #595b78; margin-top: 2px;">#15162B on #F7F7FB</div></div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-variant-numeric: tabular-nums; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 26px; font-weight: 700; line-height: 1;">16.63:1</span><span style="font-size: 12px; font-weight: 600; color: #1b7a31;">AAA</span></div>
+        <div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 6px;">Body and headings at any size.</div>
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+          <span style="width: 64px; height: 40px; border-radius: 6px; background: #ffffff; border: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #595b78; flex: none;">Aa</span>
+          <div><div style="font-size: 13px; font-weight: 600;">Secondary on Card</div><div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #595b78; margin-top: 2px;">#595B78 on #FFFFFF</div></div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-variant-numeric: tabular-nums; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 26px; font-weight: 700; line-height: 1;">6.58:1</span><span style="font-size: 12px; font-weight: 600; color: #1b7a31;">AA</span></div>
+        <div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 6px;">Captions and labels down to 12px.</div>
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+          <span style="width: 64px; height: 40px; border-radius: 6px; background: #070474; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #ffffff; flex: none;">Aa</span>
+          <div><div style="font-size: 13px; font-weight: 600;">White on Ink Navy</div><div style="font-family: ui-monospace, monospace; font-size: 11.5px; color: #595b78; margin-top: 2px;">#FFFFFF on #070474</div></div>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-variant-numeric: tabular-nums; font-family: 'Barlow Semi Condensed', sans-serif; font-size: 26px; font-weight: 700; line-height: 1;">16.42:1</span><span style="font-size: 12px; font-weight: 600; color: #1b7a31;">AAA</span></div>
+        <div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 6px;">Labels and headlines on the dark band.</div>
+      </div>
+    </div>
+    <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e6e6f0; font-size: 12.5px; line-height: 1.5; color: #595b78;">All three pairings clear WCAG AA (4.5:1 for body, 3:1 for large text) with margin. Two of the three also meet AAA (7:1); Secondary on Card meets AA only. Muted <code style="font-family: ui-monospace, monospace;">#8A8CA6</code> on white is 3.3:1 — it passes AA for large text and non-text only, so it is never used for body copy.</div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin: 56px 0 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">02</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">Typography — two fonts, two jobs</h2>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 720px;">The brief names Montserrat; the current brand file retires it. Following the newer file: <strong style="color: #15162b; font-weight: 600;">Barlow Semi Condensed</strong> for display, <strong style="color: #15162b; font-weight: 600;">Inter</strong> for everything else. Semi Condensed rather than Condensed — Condensed loses legibility at deck body sizes.</p>
+
+  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 24px 26px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Display voice · Barlow Semi Condensed</div>
+      <div style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 52px; line-height: 1.08; letter-spacing: -0.005em; margin-bottom: 6px;">Control over every change order</div>
+      <div style="font-size: 12px; color: #8a8ca6; margin-bottom: 22px;">700 · 52px · line-height 1.08 · sentence case · 5–7 words</div>
+      <div style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.15; color: #15162b;">Sub-head sits here, one line only</div>
+      <div style="font-size: 12px; color: #8a8ca6; margin-top: 6px;">600 · 26px</div>
+      <div style="margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6e6f0; font-size: 12.5px; line-height: 1.5; color: #595b78;">Marketing, decks, carousels, thumbnails only. Never in app UI.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 24px 26px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Working voice · Inter</div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div><div style="font-size: 16px; font-weight: 600;">UI title · 600 · 16px</div></div>
+        <div><div style="font-size: 13px; font-weight: 500; letter-spacing: 0.02em;">Field label · 500 · 13px</div></div>
+        <div><div style="font-size: 14px; font-weight: 400; line-height: 1.5; color: #15162b;">Body copy runs at 400, 14px, line-height 1.5. Base UI size is 13–14px. Number columns use tabular figures so digits align down the column.</div></div>
+        <div style="font-variant-numeric: tabular-nums; font-size: 22px; font-weight: 600; letter-spacing: -0.01em;">€4.8m · 72% · 20 · 11 Sept 2026</div>
+        <div style="font-size: 12px; color: #8a8ca6;">Tabular figures · 600</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Radius</div>
+      <div style="display: flex; align-items: flex-end; gap: 20px;">
+        <div style="text-align: center;"><div style="width: 64px; height: 48px; background: #e7e6fa; border: 1px solid #d6d4f5; border-radius: 14px; margin-bottom: 8px;"></div><div style="font-size: 12px; color: #595b78;">Cards 14</div></div>
+        <div style="text-align: center;"><div style="width: 64px; height: 40px; background: #e7e6fa; border: 1px solid #d6d4f5; border-radius: 9px; margin-bottom: 8px;"></div><div style="font-size: 12px; color: #595b78;">Inputs 9</div></div>
+        <div style="text-align: center;"><div style="width: 64px; height: 28px; background: #e7e6fa; border: 1px solid #d6d4f5; border-radius: 999px; margin-bottom: 8px;"></div><div style="font-size: 12px; color: #595b78;">Pills full</div></div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Spacing grid</div>
+      <div style="display: flex; align-items: flex-end; gap: 12px;">
+        <div style="text-align: center;"><div style="width: 4px; height: 44px; background: #0d08d2; margin: 0 auto 8px;"></div><div style="font-size: 12px; color: #595b78;">4</div></div>
+        <div style="text-align: center;"><div style="width: 8px; height: 44px; background: #0d08d2; margin: 0 auto 8px;"></div><div style="font-size: 12px; color: #595b78;">8</div></div>
+        <div style="text-align: center;"><div style="width: 12px; height: 44px; background: #0d08d2; margin: 0 auto 8px;"></div><div style="font-size: 12px; color: #595b78;">12</div></div>
+        <div style="text-align: center;"><div style="width: 16px; height: 44px; background: #0d08d2; margin: 0 auto 8px;"></div><div style="font-size: 12px; color: #595b78;">16</div></div>
+        <div style="text-align: center;"><div style="width: 24px; height: 44px; background: #0d08d2; margin: 0 auto 8px;"></div><div style="font-size: 12px; color: #595b78;">24</div></div>
+        <div style="text-align: center;"><div style="width: 32px; height: 44px; background: #0d08d2; margin: 0 auto 8px;"></div><div style="font-size: 12px; color: #595b78;">32</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin: 56px 0 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">03</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">The mark</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Logo specification v1.0 · approved 2026.08.04</span>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 780px;">The mark identifies; it does not explain. The previous lockup carried a descriptor at a size nobody could read, which signalled indecision rather than clarity. Descriptors now live either in a dedicated lockup at a legible size, or in the copy beside the logo.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 132px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM" style="height: 46px; width: auto; display: block;"><g fill="#070474"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="42.5" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#070474">RTPM</text></svg>
+      </div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">A · Primary</div>
+        <div style="font-size: 12px; color: #595b78; margin-top: 3px;">Icon + RTPM</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">App, website header, documents, decks, signature. Anywhere the reader already knows RTPM. Nine jobs out of ten.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 132px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM Project Control" style="height: 46px; width: auto; display: block;"><g fill="#070474"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="33.1" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#070474">RTPM</text><text x="67" y="52" font-family="Inter" font-weight="500" font-size="13" letter-spacing="0.13" fill="#595b78">Project Control</text></svg>
+      </div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">B · Cold contact</div>
+        <div style="font-size: 12px; color: #595b78; margin-top: 3px;">Icon + RTPM + descriptor</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">LinkedIn profile, first slide, card, tender cover, trade stand. Anywhere the reader does not yet know what RTPM is.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 132px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0; padding: 0 16px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259 52" role="img" aria-label="Real Time" style="height: 42px; width: auto; display: block;"><g fill="#070474"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="71" y="42.5" font-family="Barlow Semi Condensed" font-weight="700" font-size="49" letter-spacing="-0.588" fill="#070474">Real Time</text></svg>
+      </div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">C · Real Time</div>
+        <div style="font-size: 12px; color: #595b78; margin-top: 3px;">Icon + Real Time</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">Product-family and platform contexts where the words carry more than the initials: video corners, end cards, partner material.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 132px; display: flex; align-items: center; justify-content: center; gap: 20px; border-bottom: 1px solid #e6e6f0;">
+        <img src="assets/rtpm-icon-navy.svg" alt="RTPM icon" style="width: 52px; height: 52px; display: block;">
+        <img src="assets/rtpm-appicon.svg" alt="RTPM app tile" style="width: 52px; height: 52px; display: block;">
+      </div>
+      <div style="padding: 16px;">
+        <div style="font-size: 14px; font-weight: 600;">Icon alone</div>
+        <div style="font-size: 12px; color: #595b78; margin-top: 3px;">Icon · app tile</div>
+        <div style="font-size: 12.5px; line-height: 1.45; color: #8a8ca6; margin-top: 10px;">Only where a wordmark cannot be read at all: app icon, favicon, avatar, watermark. Tile is a 14% inset on Ink Navy, square as supplied — the operating system applies its own mask.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Construction — every dimension is a ratio of icon height, x</div>
+      <div style="display: grid; grid-template-columns: 0.5fr 1.4fr 1fr 1.5fr; gap: 0; font-size: 12.5px;">
+        <div style="font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 10.5px; color: #595b78; padding-bottom: 8px; border-bottom: 1px solid #e6e6f0;">Lock</div>
+        <div style="font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 10.5px; color: #595b78; padding-bottom: 8px; border-bottom: 1px solid #e6e6f0;">Element</div>
+        <div style="font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 10.5px; color: #595b78; padding-bottom: 8px; border-bottom: 1px solid #e6e6f0;">Value</div>
+        <div style="font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 10.5px; color: #595b78; padding-bottom: 8px; border-bottom: 1px solid #e6e6f0;">Note</div>
+
+        <div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #8a8ca6;">All</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-weight: 500;">Icon</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-family: ui-monospace, monospace;">x</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #595b78;">Square, sharp corners</div>
+        <div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #8a8ca6;">A</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-weight: 500;">Wordmark</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-family: ui-monospace, monospace;">0.88 x</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #595b78;">Barlow Semi Condensed 700</div>
+        <div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #8a8ca6;">A</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-weight: 500;">Tracking · gap</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-family: ui-monospace, monospace;">−0.034 em · 0.28 x</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #595b78;">Gap is optical, not metric</div>
+        <div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #8a8ca6;">B</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-weight: 500;">Wordmark</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-family: ui-monospace, monospace;">0.88 x · −0.034 em</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #595b78;">Cap height flush to icon top</div>
+        <div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #8a8ca6;">B</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-weight: 500;">Descriptor</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-family: ui-monospace, monospace;">0.25 x · Inter 500</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #595b78;">Baseline flush to icon bottom · 10px floor</div>
+        <div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #8a8ca6;">C</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-weight: 500;">Wordmark</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; font-family: ui-monospace, monospace;">0.95 x · −0.012 em</div><div style="padding: 9px 0; border-bottom: 1px solid #f0f0f5; color: #595b78;">Cap height centred on the icon · gap 0.36 x</div>
+        <div style="padding: 9px 0; color: #8a8ca6;">All</div><div style="padding: 9px 0; font-weight: 500;">Clear space</div><div style="padding: 9px 0; font-family: ui-monospace, monospace;">0.5 x</div><div style="padding: 9px 0; color: #595b78;">All four sides, from the icon bounding box</div>
+      </div>
+      <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6e6f0; font-size: 12.5px; line-height: 1.5; color: #595b78;">Barlow Semi Condensed 700 for every wordmark, Inter 500 for the descriptor. No substitution. Never rebuild the lockup by eye — use the ratios.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 16px;">Clear space &amp; minimum size</div>
+        <div style="display: flex; align-items: center; gap: 22px; margin-bottom: 16px;">
+          <div style="flex: none; border: 1px dashed #b9bacb; padding: 26px; border-radius: 6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM" style="height: 52px; width: auto; display: block;"><g fill="#070474"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="42.5" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#070474">RTPM</text></svg>
+          </div>
+          <div style="font-size: 12.5px; line-height: 1.55; color: #595b78;">Dashed edge marks 0.5 x. Nothing enters it — no type, rule, button or image edge. On a photograph it doubles to 1 x.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 14px; border-top: 1px solid #e6e6f0; font-size: 12.5px; color: #595b78;">
+          <div style="display: flex; justify-content: space-between;"><span>Lockup A</span><span style="font-family: ui-monospace, monospace; color: #15162b;">16px · 8mm</span></div>
+          <div style="display: flex; justify-content: space-between;"><span>Lockup B</span><span style="font-family: ui-monospace, monospace; color: #15162b;">40px · 12mm</span></div>
+          <div style="display: flex; justify-content: space-between;"><span>Icon alone</span><span style="font-family: ui-monospace, monospace; color: #15162b;">16px</span></div>
+          <div style="line-height: 1.5; margin-top: 4px;">Below 40px the descriptor falls under its 10px floor, so lockup A is used instead. Every file is checked at 16px before release.</div>
+        </div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Why the corners are sharp</div>
+        <div style="font-size: 12.5px; line-height: 1.55; color: #595b78;">Four brackets around a shared open centre: several parties, one common record. Softening was tested and rejected — the narrow negative-space channels are what make the mark legible small, and rounding closes them from both sides. Sharp corners also match Barlow Semi Condensed, which has flat square terminals.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 96px; background: #ffffff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0;"><img src="assets/rtpm-icon-navy.svg" alt="" style="width: 40px; height: 40px; display: block;"></div>
+      <div style="padding: 14px 16px;"><div style="font-size: 13.5px; font-weight: 600;">Primary · Ink Navy</div><div style="font-family: ui-monospace, monospace; font-size: 12px; color: #595b78; margin-top: 3px;">#070474</div><div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 8px;">Default, on Paper White or any near-white surface.</div></div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 96px; background: #ffffff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0;"><img src="assets/rtpm-icon-indigo.svg" alt="" style="width: 40px; height: 40px; display: block;"></div>
+      <div style="padding: 14px 16px;"><div style="font-size: 13.5px; font-weight: 600;">Secondary · Signal Indigo</div><div style="font-family: ui-monospace, monospace; font-size: 12px; color: #595b78; margin-top: 3px;">#0D08D2</div><div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 8px;">Only where navy is unavailable or too heavy, e.g. a small screen UI mark.</div></div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 96px; background: #070474; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0;"><img src="assets/rtpm-icon-white.svg" alt="" style="width: 40px; height: 40px; display: block;"></div>
+      <div style="padding: 14px 16px;"><div style="font-size: 13.5px; font-weight: 600;">Reverse · White</div><div style="font-family: ui-monospace, monospace; font-size: 12px; color: #595b78; margin-top: 3px;">#FFFFFF on #070474</div><div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 8px;">Ink Navy is the only approved dark background.</div></div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+      <div style="height: 96px; background: #ffffff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e6e6f0;"><img src="assets/rtpm-icon-black.svg" alt="" style="width: 40px; height: 40px; display: block;"></div>
+      <div style="padding: 14px 16px;"><div style="font-size: 13.5px; font-weight: 600;">Monochrome · Black</div><div style="font-family: ui-monospace, monospace; font-size: 12px; color: #595b78; margin-top: 3px;">#000000</div><div style="font-size: 12px; line-height: 1.45; color: #8a8ca6; margin-top: 8px;">Single-colour print, engraving, third-party templates that reject colour.</div></div>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden; margin-bottom: 24px;">
+    <div style="padding: 18px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 15px; font-weight: 600;">One flat colour, always</div>
+      <div style="font-size: 12.5px; line-height: 1.5; color: #595b78; margin-top: 4px;">Not permitted: gold-only logos, gradients, multi-colour logos including a coloured icon beside a differently coloured wordmark, and status-colour logos in red, amber or green. Accent Gold is a highlight colour in layouts and never a logo colour.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Never to the mark</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; line-height: 1.5; color: #595b78;">
+          <div>Round the icon corners, or outline the icon or the letters.</div>
+          <div>Re-space, stretch, condense or skew the wordmark, or substitute another typeface.</div>
+          <div>Add a shadow, glow, bevel or 3D extrusion. Rotate or set on a diagonal.</div>
+          <div>Re-order or mirror the elements. Add a tagline, year, product name or slash inside the lockup.</div>
+          <div>Enclose the lockup in a box, pill or badge.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Never to placement</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; line-height: 1.5; color: #595b78;">
+          <div>Reverse logo on a mid-tone or a gradient; navy logo on a dark background.</div>
+          <div>More than one logo per surface, or a logo on a face-and-hook visual.</div>
+          <div>Lockup B below 40px icon height, or the icon alone where the lockup would fit.</div>
+          <div>A partner logo without a 1 x separator rule.</div>
+          <div>Recolour the mark to match a customer's brand.</div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 18px 24px; border-top: 1px solid #e6e6f0; background: #f7f7fb; font-size: 12.5px; line-height: 1.6; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Production.</strong> SVG is the master for screen and print. Wordmark text must be converted to outlines in every distributed file so the mark cannot break where Barlow Semi Condensed is absent — the handoff SVGs still carry live text and must be outlined once before distribution. PNGs at 1x, 2x, 3x on transparent ground. No file carries a background rectangle except the app tile.</div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin: 56px 0 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">04</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">Status stepper</h2>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 720px;">Four fixed stages on every record, every module. Done is green, current is indigo with a ring, pending is a hollow grey node. The stage owner sits under the label, and the resolved stage carries its date.</p>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 32px 40px 28px; margin-bottom: 16px;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); position: relative;">
+      <div style="position: absolute; top: 11px; left: 12.5%; right: 12.5%; height: 2px; background: #e6e6f0;"></div>
+      <div style="position: absolute; top: 11px; left: 12.5%; width: 25%; height: 2px; background: #28a745;"></div>
+      <div style="text-align: center; position: relative;">
+        <div style="width: 24px; height: 24px; border-radius: 999px; background: #28a745; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 13px; font-weight: 700;">✓</div>
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #28a745;">Identified</div>
+        <div style="font-size: 12px; color: #8a8ca6; margin-top: 5px;">Package PM</div>
+      </div>
+      <div style="text-align: center; position: relative;">
+        <div style="width: 24px; height: 24px; border-radius: 999px; background: #28a745; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 13px; font-weight: 700;">✓</div>
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #28a745;">Assessed</div>
+        <div style="font-size: 12px; color: #8a8ca6; margin-top: 5px;">Lead Scheduler</div>
+      </div>
+      <div style="text-align: center; position: relative;">
+        <div style="width: 24px; height: 24px; border-radius: 999px; background: #ffffff; border: 2px solid #0d08d2; box-shadow: 0 0 0 4px #e7e6fa; margin: 0 auto 12px;"></div>
+        <div style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #0d08d2;">Mitigated</div>
+        <div style="font-size: 12px; color: #595b78; margin-top: 5px; font-weight: 500;">Quality Manager</div>
+      </div>
+      <div style="text-align: center; position: relative;">
+        <div style="width: 24px; height: 24px; border-radius: 999px; background: #ffffff; border: 2px solid #e6e6f0; margin: 0 auto 12px;"></div>
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #8a8ca6;">Resolved</div>
+        <div style="font-size: 12px; color: #8a8ca6; margin-top: 5px;">Commissioning Authority</div>
+        <div style="font-variant-numeric: tabular-nums; font-size: 12px; color: #e0a800; margin-top: 3px; font-weight: 600;">2026.10.11 target</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Compact variant — table row / side panel</div>
+      <div style="display: flex; align-items: center; gap: 0;">
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #28a745; flex: none;"></span>
+        <span style="height: 2px; width: 28px; background: #28a745;"></span>
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #28a745; flex: none;"></span>
+        <span style="height: 2px; width: 28px; background: #e6e6f0;"></span>
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #0d08d2; flex: none;"></span>
+        <span style="height: 2px; width: 28px; background: #e6e6f0;"></span>
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #e6e6f0; flex: none;"></span>
+        <span style="font-size: 13px; font-weight: 500; color: #15162b; margin-left: 14px;">Mitigated</span>
+        <span style="font-size: 13px; color: #8a8ca6; margin-left: 6px;">3 of 4</span>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Overdue state</div>
+      <div style="display: flex; align-items: center; gap: 0;">
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #28a745; flex: none;"></span>
+        <span style="height: 2px; width: 28px; background: #28a745;"></span>
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #e63946; box-shadow: 0 0 0 3px rgba(230,57,70,0.14); flex: none;"></span>
+        <span style="height: 2px; width: 28px; background: #e6e6f0;"></span>
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #e6e6f0; flex: none;"></span>
+        <span style="height: 2px; width: 28px; background: #e6e6f0;"></span>
+        <span style="width: 14px; height: 14px; border-radius: 999px; background: #ffffff; border: 2px solid #e6e6f0; flex: none;"></span>
+        <span style="font-size: 13px; font-weight: 600; color: #e63946; margin-left: 14px;">Assessed · overdue 9 days</span>
+      </div>
+      <div style="font-size: 12.5px; line-height: 1.5; color: #595b78; margin-top: 14px;">Only the current node turns red. Stage colours never change meaning — red here reads "this stage is late," not "critical severity."</div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin: 56px 0 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">05</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">Severity badges</h2>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 720px;">One shape family, three sizes. Dot plus label in tables so the colour is never the only carrier of meaning. Solid chips are reserved for detail headers where a single badge stands alone.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Table — dot + label</div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #e63946;"></span>Critical</div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #ff8b00;"></span>High</div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #e0a800;"></span>Medium</div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #28a745;"></span>Low</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Tinted pill — cards, filters</div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+        <span style="display: inline-flex; align-items: center; gap: 7px; background: #fdecee; color: #b02a34; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #e63946;"></span>Critical</span>
+        <span style="display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>High</span>
+        <span style="display: inline-flex; align-items: center; gap: 7px; background: #fdf4dd; color: #8a6600; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #e0a800;"></span>Medium</span>
+        <span style="display: inline-flex; align-items: center; gap: 7px; background: #e8f6eb; color: #1b7a31; border-radius: 999px; padding: 4px 11px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #28a745;"></span>Low</span>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 22px 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Solid — detail header, count badge</div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+        <span style="display: inline-flex; align-items: center; background: #e63946; color: #ffffff; border-radius: 999px; padding: 5px 13px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em;">CRITICAL</span>
+        <span style="display: inline-flex; align-items: center; background: #ff8b00; color: #ffffff; border-radius: 999px; padding: 5px 13px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em;">HIGH</span>
+        <div style="display: flex; gap: 8px; margin-top: 4px;">
+          <span style="font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 26px; background: #e63946; color: #ffffff; border-radius: 7px; font-size: 13px; font-weight: 700;">3</span>
+          <span style="font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 26px; background: #ff8b00; color: #ffffff; border-radius: 7px; font-size: 13px; font-weight: 700;">4</span>
+          <span style="font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 26px; background: #e0a800; color: #ffffff; border-radius: 7px; font-size: 13px; font-weight: 700;">4</span>
+          <span style="font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 26px; background: #ffffff; color: #8a8ca6; border: 1px solid #e6e6f0; border-radius: 7px; font-size: 13px; font-weight: 600;">—</span>
+        </div>
+        <div style="font-size: 12px; line-height: 1.45; color: #8a8ca6;">Risk-matrix counts. Empty cell is a dash, never a zero.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin: 56px 0 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">06</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">Actions &amp; people</h2>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 720px;">One gold action per screen — the one that sends something out of the system and creates a record. Everything else is indigo or ghost.</p>
+
+  <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Button hierarchy</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px;">
+        <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 40px; line-height: 1; display: inline-flex; align-items: center; background: #ffcc00; color: #15162b; border: none; border-radius: 9px; padding: 0 18px; font-size: 13.5px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 2px rgba(21,22,43,0.1);" style-hover="background: #f2c200;">Send Update</button>
+        <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 40px; line-height: 1; display: inline-flex; align-items: center; background: #0d08d2; color: #ffffff; border: none; border-radius: 9px; padding: 0 18px; font-size: 13.5px; font-weight: 600; cursor: pointer;" style-hover="background: #0a06a8;">Save record</button>
+        <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 40px; line-height: 1; display: inline-flex; align-items: center; background: #ffffff; color: #15162b; border: 1px solid #e6e6f0; border-radius: 9px; padding: 0 18px; font-size: 13.5px; font-weight: 600; cursor: pointer;" style-hover="background: #f7f7fb;">Cancel</button>
+        <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 40px; line-height: 1; display: inline-flex; align-items: center; background: transparent; color: #0d08d2; border: none; border-radius: 9px; padding: 0 12px; font-size: 13.5px; font-weight: 600; cursor: pointer;" style-hover="background: #e7e6fa;">Look up in R&amp;R</button>
+        <button style="font-family: Inter, sans-serif; box-sizing: border-box; height: 40px; line-height: 1; display: inline-flex; align-items: center; background: #f2f2f7; color: #b9bacb; border: none; border-radius: 9px; padding: 0 18px; font-size: 13.5px; font-weight: 600; cursor: not-allowed;">Send Update</button>
+      </div>
+      <div style="display: flex; gap: 24px; font-size: 12.5px; line-height: 1.5; color: #595b78; border-top: 1px solid #e6e6f0; padding-top: 16px;">
+        <div style="flex: 1;"><strong style="color: #15162b; font-weight: 600;">Gold</strong> — one per screen. Ink text, never white. Hover darkens to #F2C200.</div>
+        <div style="flex: 1;"><strong style="color: #15162b; font-weight: 600;">Indigo</strong> — routine confirm. <strong style="color: #15162b; font-weight: 600;">Ghost</strong> — inline lookups. Height 40px, radius 9.</div>
+      </div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 24px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Avatar + role chip</div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="width: 34px; height: 34px; border-radius: 999px; background: #e7e6fa; color: #0d08d2; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: none;">JL</span>
+          <div><div style="font-size: 13.5px; font-weight: 600;">Jens Larsen <span style="color: #8a8ca6; font-weight: 400;">(HD Contractor)</span></div><div style="font-size: 12px; color: #8a8ca6; margin-top: 2px;">Civil Works: Site manager — Contractor</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="width: 34px; height: 34px; border-radius: 999px; background: #fff3e5; color: #b36200; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex: none;">MZ</span>
+          <div><div style="font-size: 13.5px; font-weight: 600;">Ming Zhang <span style="color: #8a8ca6; font-weight: 400;">(Customer PMO)</span></div><div style="font-size: 12px; color: #8a8ca6; margin-top: 2px;">IT/Data Infrastructure: Controls lead</div></div>
+        </div>
+        <div style="display: flex; gap: 6px; align-items: center; padding-top: 6px;">
+          <span style="width: 26px; height: 26px; border-radius: 999px; background: #e7e6fa; color: #0d08d2; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">JL</span>
+          <span style="width: 26px; height: 26px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">PK</span>
+          <span style="width: 26px; height: 26px; border-radius: 999px; background: #fdf4dd; color: #8a6600; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">BK</span>
+          <span style="font-size: 12px; color: #8a8ca6; margin-left: 4px;">+2 informed</span>
+        </div>
+      </div>
+      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e6e6f0; font-size: 12.5px; line-height: 1.5; color: #595b78;">Tint by organisation, not by discipline — owner-side readers need to see who is contractor and who is customer at a glance.</div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 12px; margin: 56px 0 20px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 13px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">07</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; margin: 0;">Icon system</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Thirteen modules · thirteen pictograms</span>
+  </div>
+  <p style="font-size: 14px; line-height: 1.5; color: #595b78; margin: 0 0 24px; max-width: 780px;">One fixed pictogram per module, so a user recognises the module before reading its label. The icons follow the mark's own geometry, not an external library style.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Construction</div>
+      <div style="font-size: 13px; line-height: 1.6; color: #595b78;">Sharp corners only — no rounded joins, no rounded caps — matching the logo's construction principle in section 03. Monoline stroke at 1.5px. Built from straight lines and right angles wherever possible; a curve is permitted only where the pictogram is unreadable without one, and even then the terminals stay square.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Sizing</div>
+      <div style="display: flex; align-items: flex-end; gap: 22px; margin-bottom: 14px;">
+        <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#0d08d2" stroke-width="1.5" style="width: 16px; height: 16px; display: block; margin: 0 auto 8px;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg><div style="font-size: 12px; color: #595b78;">16px</div></div>
+        <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#0d08d2" stroke-width="1.5" style="width: 20px; height: 20px; display: block; margin: 0 auto 8px;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg><div style="font-size: 12px; color: #595b78;">20px</div></div>
+        <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#0d08d2" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 8px;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg><div style="font-size: 12px; color: #595b78;">24px</div></div>
+      </div>
+      <div style="font-size: 13px; line-height: 1.6; color: #595b78;">No new size token. 16px in the collapsed icon rail and table rows. 20px in the expanded sidebar — dense enough that a smaller icon keeps the label leading, not competing. 24px on cards and other standalone placements, where the icon carries more visual weight on its own.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Colour</div>
+      <div style="display: flex; gap: 10px; margin-bottom: 14px;">
+        <div style="flex: 1; background: #0d08d2; border-radius: 8px; padding: 12px 0; text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></div>
+        <div style="flex: 1; background: #070474; border-radius: 8px; padding: 12px 0; text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.6" style="width: 24px; height: 24px; display: block; margin: 0 auto;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></div>
+        <div style="flex: 1; background: #ffffff; border: 1px solid #e6e6f0; border-radius: 8px; padding: 11px 0; text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#0d08d2" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg></div>
+      </div>
+      <div style="font-size: 13px; line-height: 1.6; color: #595b78;">Existing tokens only. White on the active row, white at reduced opacity when inactive, Primary Indigo on light surfaces outside the sidebar. Never a second colour and never gold except where the icon sits inside a gold-background element — rare, and never in the sidebar. One named exception to the no-fill rule: the small midpoint square on Interface Management, which is filled by design to mark the point of contact between two parties. No other icon may use a fill, and no future icon may add one without amending this rule explicitly.</div>
+    </div>
+  </div>
+
+  <div style="background: #070474; border-radius: 14px; padding: 28px 24px; margin-bottom: 24px;">
+    <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 20px;">The fixed module set · thirteen pictograms · 24px on Ink Navy</div>
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px 12px;">
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Dashboard</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><path d="M4 4 H20 V12 L12 20 L4 12 Z"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Risk &amp; Opportunities</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><path d="M3 12 H11"></path><path d="M11 12 L19 5"></path><path d="M11 12 L19 19"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Change Management</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><path d="M4 20 H20 L15 5 H9 Z"></path><path d="M12 10 V15"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Nonconformance</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><path d="M5 3 H14 L19 8 V21 H5 Z"></path><path d="M14 3 V8 H19"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Documents</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 5 L12 13 L21 5"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Correspondence</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="4" y="3" width="16" height="18"></rect><path d="M8 12 L11 15 L16 9"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Site Inspection</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="4" y="3" width="16" height="18"></rect><rect x="12" y="12" width="5" height="5"></rect></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Permit &amp; Compliance</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="4" y="4" width="16" height="16"></rect><path d="M12 8 V12 H16"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Time Log</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="4" y="14" width="4" height="6"></rect><rect x="10" y="9" width="4" height="11"></rect><rect x="16" y="4" width="4" height="16"></rect></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Project Economics</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><rect x="4" y="6" width="5" height="5"></rect><path d="M3 20 V15 H12 V20"></path><rect x="13" y="6" width="5" height="5"></rect><path d="M10 20 V15 H19 V20"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Roles &amp; Responsibility</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><path d="M9 4 H4 V20 H9"></path><path d="M15 4 H20 V20 H15"></path><rect x="11" y="11" width="2" height="2" fill="#ffffff" stroke="none"></rect></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">Interface Management</div></div>
+      <div style="text-align: center;"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" style="width: 24px; height: 24px; display: block; margin: 0 auto 10px;"><path d="M12 3 L21 12 L12 21 L3 12 Z"></path><path d="M12 8 V14"></path></svg><div style="font-size: 11.5px; line-height: 1.35; color: #ffffff;">HSE</div></div>
+    </div>
+    <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.22); font-size: 13px; line-height: 1.6; color: #ffffff;"><strong style="font-weight: 600;">The set is complete at thirteen</strong> — one icon for each of the thirteen confirmed modules in 000 RTPM Core, section 11. No further module icon is added without updating that source file first. None may be swapped for a library icon — Lucide, Feather, or any other set — at any point in the product, on the website, or in marketing material. RTPM 0, RTPM 2 and RTPM 4 inherit this section rather than each defining their own icon rule.<br><br><strong style="font-weight: 600;">Label rule.</strong> The sidebar label reads "HSE", never spelled out — matching how 000 RTPM Core names the module and how the ICP files refer to the role. A future HSE marketing or website page follows the external-naming rule in 002 Behavior Rules and expands it on first mention there only; the product sidebar label itself never changes.</div>
+  </div>
+
+  <div style="margin-top: 56px; background: #070474; border-radius: 16px; padding: 32px 36px; color: #ffffff;">
+    <div style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1; margin-bottom: 20px;">Three decisions to <span style="color: #ffcc00;">lock</span> before Step 2</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">01 · Blues</div>
+        <div style="font-size: 14px; line-height: 1.5; color: #ffffff;">Ink Navy #070474 for surface, Primary Indigo #0D08D2 for signal. #2E2CA1 and #0A0868 retired.</div>
+      </div>
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">02 · Fonts</div>
+        <div style="font-size: 14px; line-height: 1.5; color: #ffffff;">Barlow Semi Condensed for display, Inter for everything. Montserrat stays retired.</div>
+      </div>
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">03 · Medium status</div>
+        <div style="font-size: 14px; line-height: 1.5; color: #ffffff;">Medium moves to #E0A800 so gold #FFCC00 means "primary action" and nothing else.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

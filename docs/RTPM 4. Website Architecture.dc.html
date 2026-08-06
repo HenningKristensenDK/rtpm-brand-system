@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #f7f7fb; -webkit-font-smoothing: antialiased; }
+  a { color: #0d08d2; text-decoration: none; }
+  a:hover { color: #070474; text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="font-family: Inter, sans-serif; color: #15162b; background: #f7f7fb; max-width: 1560px; margin: 0 auto; padding: 0 56px 120px;">
+
+  <div style="padding: 72px 0 40px; border-bottom: 1px solid #e6e6f0; margin-bottom: 40px;">
+    <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">RTPM Brand System v4 · Step 4 of 4 · Website architecture · rtpm.dk</div>
+    <h1 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 72px; line-height: 1.02; margin: 0 0 20px; letter-spacing: -0.015em; max-width: 960px;">Website architecture</h1>
+    <p style="font-size: 16px; line-height: 1.55; color: #595b78; margin: 0; max-width: 800px;">The last surface. A website for owner-side buyers evaluating a control platform, not a campaign site: role-based routes, sector-specific paths, and a procurement layer a CIO can read without asking for a call. Examples render at 1440px, true size — scroll each one sideways if your window is narrower. All copy is placeholder except the approved category line.</p>
+  </div>
+
+  <div style="background: #e7e6fa; border: 1px solid #dcdce8; border-radius: 12px; padding: 16px 20px; margin-bottom: 40px; font-size: 13px; line-height: 1.6;"><strong style="font-weight: 600;">Type rule for this surface.</strong> The website runs on <strong style="font-weight: 600;">Inter only</strong> — the same as the product. Barlow Semi Condensed is a marketing voice and does not appear on rtpm.dk. A buyer who moves from the site into the app should not notice a change of typeface; that continuity is part of the trust argument. Text secondary <code style="font-family: ui-monospace, monospace;">#595B78</code> on the page tint <code style="font-family: ui-monospace, monospace;">#F7F7FB</code> clears WCAG AA for body copy — see RTPM 1. Core Tokens, "Contrast requirements". Below 15px it is used for captions only, never for running body text.</div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 12px; padding: 20px 22px; margin-bottom: 40px;">
+    <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Emphasis, not highlight</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div style="font-size: 13px; line-height: 1.6; color: #595b78;">Word-level gold text highlighting — the Accent Gold rule in RTPM 1 and the carousel and headline highlight pattern in RTPM 2 — is a marketing-only device and does not apply to rtpm.dk. The website's emphasis mechanism is the category line set in Primary Indigo, small caps, on light surfaces, exactly as stated in the homepage hero rule in section A.</div>
+      <div style="font-size: 13px; line-height: 1.6; color: #595b78;">Gold on this site is reserved for exactly one CTA button per page, inside the one navy band described in Surface rhythm — never for headline words, and never on a light background, per the dark-only rule in RTPM 1. No website headline, on any page type, carries a bold-yellow word span. If a future page needs word-level emphasis in body copy it uses Primary Indigo, following the same one-span, no-function-words discipline as the gold pattern — different in colour only.</div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 72px;">
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px; border-top: 3px solid #070474;">
+      <div style="font-size: 17px; font-weight: 600; line-height: 1.25; margin-bottom: 8px;">Category first, product second</div>
+      <div style="font-size: 12.5px; line-height: 1.55; color: #595b78;">The visitor must know what kind of thing RTPM is inside four seconds. Features come after the category is established, never before.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px; border-top: 3px solid #070474;">
+      <div style="font-size: 17px; font-weight: 600; line-height: 1.25; margin-bottom: 8px;">Routes, not a funnel</div>
+      <div style="font-size: 12.5px; line-height: 1.55; color: #595b78;">Five roles and two sectors reach different pages. A €500M data centre PMC and a renewables portfolio director do not share an argument.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px; border-top: 3px solid #070474;">
+      <div style="font-size: 17px; font-weight: 600; line-height: 1.25; margin-bottom: 8px;">Proof over promise</div>
+      <div style="font-size: 12.5px; line-height: 1.55; color: #595b78;">Real product screens, real workflow sequences, real governance answers. No stock photography, no abstract illustration, no invented metrics.</div>
+    </div>
+    <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 14px; padding: 20px 22px; border-top: 3px solid #070474;">
+      <div style="font-size: 17px; font-weight: 600; line-height: 1.25; margin-bottom: 8px;">Light, with one dark band</div>
+      <div style="font-size: 12.5px; line-height: 1.55; color: #595b78;">Paper white throughout. Ink Navy appears once per page as a single full-bleed band, and it always carries the trust argument.</div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin-bottom: 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">A</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Homepage above the fold</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">1440 × 900 · the whole argument in one screen</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Five elements, one screen</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Category, outcome, live workflow proof, tenant statement, one action.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">A director who lands here from a LinkedIn post has one screen to decide whether this is relevant to a project worth hundreds of millions. Category, consequence, evidence, and how it runs inside their tenant.</div>
+      </div>
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Must include</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">The category line, one operational outcome, a live workflow proof snippet, the tenant-native trust statement, and a single primary action. Nothing else above the fold.</div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Layout rules</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Split 52/48, text left. H1 at 56px Inter 600, max two lines. The workflow proof is a real three-step sequence, not a diagram — it reuses the linear strip component from RTPM 2, section C, rather than being a separate pattern. Role bar sits directly under the fold as the first thing scrolled to.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7; overflow-x: auto;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — header and hero at true size</div>
+      <div style="width: 1440px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.08);">
+
+        <div style="height: 76px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; background: #ffffff;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM" style="height: 30px; width: auto; display: block;"><g fill="#070474"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="42.5" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#070474">RTPM</text></svg>
+          <div style="display: flex; align-items: center; gap: 32px;">
+            <span style="font-size: 15px; font-weight: 500; color: #15162b; display: flex; align-items: center; gap: 6px;">Platform <span style="font-size: 10px; color: #8a8ca6;">▾</span></span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b; display: flex; align-items: center; gap: 6px;">By role <span style="font-size: 10px; color: #8a8ca6;">▾</span></span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b; display: flex; align-items: center; gap: 6px;">By sector <span style="font-size: 10px; color: #8a8ca6;">▾</span></span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b;">Governance</span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b;">Insight</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <span style="font-size: 15px; font-weight: 500; color: #0d08d2;">Sign in</span>
+            <span style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; background: #0d08d2; color: #ffffff; border-radius: 9px; font-size: 15px; font-weight: 600;">Book a working session</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 52fr 48fr; gap: 56px; padding: 64px 48px 56px; align-items: start;">
+          <div>
+            <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0d08d2; margin-bottom: 22px;">Customer-side control layer for complex capital projects</div>
+            <h2 style="font-size: 56px; font-weight: 600; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 24px;">Placeholder headline naming the outcome</h2>
+            <p style="font-size: 19px; line-height: 1.55; color: #595b78; margin: 0 0 32px; max-width: 560px;">Placeholder support paragraph. Two sentences that name the reader and the consequence, in their language, without describing software.</p>
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 36px;">
+              <span style="display: inline-flex; align-items: center; height: 52px; padding: 0 26px; background: #0d08d2; color: #ffffff; border-radius: 9px; font-size: 16px; font-weight: 600;">Book a working session</span>
+              <span style="display: inline-flex; align-items: center; height: 52px; padding: 0 22px; background: #ffffff; color: #15162b; border: 1px solid #dcdce8; border-radius: 9px; font-size: 16px; font-weight: 600;">See the control layer</span>
+            </div>
+            <div style="border-top: 1px solid #e6e6f0; padding-top: 24px; display: flex; align-items: center; gap: 14px;">
+              <img src="assets/rtpm-icon-navy.svg" alt="" style="width: 22px; height: 22px; display: block; flex: none;">
+              <div style="font-size: 15px; line-height: 1.5; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Environment-native.</strong> Runs inside your own Microsoft 365 or Google tenant. Your data stays where your governance already covers it.</div>
+            </div>
+          </div>
+          <div>
+            <div style="border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden; background: #ffffff; box-shadow: 0 1px 3px rgba(21,22,43,0.06);">
+              <div style="padding: 16px 20px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+                <div style="font-size: 14px; font-weight: 600;">One sequence, start to reported</div>
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #1b7a31;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #28a745;"></span>Live</span>
+              </div>
+              <div style="padding: 22px 20px;">
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                  <div style="display: flex; gap: 16px;">
+                    <div style="flex: none; display: flex; flex-direction: column; align-items: center; width: 28px;"><span style="width: 26px; height: 26px; border-radius: 999px; background: #0d08d2; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">1</span><span style="flex: 1; width: 2px; background: #e6e6f0;"></span></div>
+                    <div style="padding-bottom: 20px;"><div style="font-size: 15px; font-weight: 600;">Early warning raised on site</div><div style="font-size: 13.5px; line-height: 1.5; color: #595b78; margin-top: 4px;">Package PM, at the point of observation</div></div>
+                  </div>
+                  <div style="display: flex; gap: 16px;">
+                    <div style="flex: none; display: flex; flex-direction: column; align-items: center; width: 28px;"><span style="width: 26px; height: 26px; border-radius: 999px; background: #0d08d2; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">2</span><span style="flex: 1; width: 2px; background: #e6e6f0;"></span></div>
+                    <div style="padding-bottom: 20px;"><div style="font-size: 15px; font-weight: 600;">Change order quantified and approved</div><div style="font-size: 13.5px; line-height: 1.5; color: #595b78; margin-top: 4px;">Named approver, logged decision, contract reference attached</div></div>
+                  </div>
+                  <div style="display: flex; gap: 16px;">
+                    <div style="flex: none; display: flex; flex-direction: column; align-items: center; width: 28px;"><span style="width: 26px; height: 26px; border-radius: 999px; background: #00c794; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700;">3</span></div>
+                    <div><div style="font-size: 15px; font-weight: 600;">Report is already current</div><div style="font-size: 13.5px; line-height: 1.5; color: #595b78; margin-top: 4px;">No monthly cycle between the event and the board pack</div></div>
+                  </div>
+                </div>
+              </div>
+              <div style="border-top: 1px solid #e6e6f0; background: #fafafd; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 13px; color: #595b78;">Placeholder: real product screen sits here</span>
+                <span style="font-size: 13px; font-weight: 600; color: #0d08d2;">Walk the sequence →</span>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 24px; margin-top: 20px; padding: 0 4px;">
+              <span style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8ca6;">Built for</span>
+              <span style="font-size: 13.5px; color: #595b78;">Owners · PMCs · Owner's representatives</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid #e6e6f0; padding: 22px 48px; background: #fafafd; display: flex; align-items: center; gap: 20px;">
+          <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #595b78; flex: none;">Start where you sit</span>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 999px; font-size: 14px; font-weight: 500;">Executive</span>
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 999px; font-size: 14px; font-weight: 500;">Project Director</span>
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 999px; font-size: 14px; font-weight: 500;">PMO &amp; Controls</span>
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 999px; font-size: 14px; font-weight: 500;">CIO &amp; IT</span>
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 999px; font-size: 14px; font-weight: 500;">Procurement</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Lead with the category line in indigo caps. It is the only thing that must be read.</div>
+          <div>Make the hero's right side a real sequence with real role names, not an abstract graphic.</div>
+          <div>Put the tenant statement above the fold. For a CIO it is the qualifying question.</div>
+          <div>Offer one primary action plus one low-commitment alternative. Never three.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Open on a dark hero. Dark heroes read as campaign, and this audience is buying infrastructure.</div>
+          <div>Use Barlow here, or any headline above 56px. That is the marketing voice, not the site.</div>
+          <div>Put a customer logo wall above the fold before real named references exist.</div>
+          <div>Say "AI-powered" in the hero. AI is an enabling capability, never the category.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">B</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Role-based navigation</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Five roles · five different arguments</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">The "By role" panel</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Each role gets its own question, its own proof, and its own landing page.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">On a capital project the buying group is five people who disagree about what matters. An executive is asking about exposure, a CIO about tenancy, procurement about exit. One page cannot answer all five without becoming vague.</div>
+      </div>
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Must include</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Five entries, each with the role name, the question that role actually asks, and a route. The panel is a directory, not a menu of features.</div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Layout rules</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Full-width dropdown panel, five equal columns, opens on hover and on focus. Each column: role, question in quotes, three-line answer, one link. A right rail carries the sector split so a visitor can cross over.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7; overflow-x: auto;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — panel open</div>
+      <div style="width: 1440px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.08);">
+        <div style="height: 76px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between; padding: 0 48px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM" style="height: 30px; width: auto; display: block;"><g fill="#070474"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="42.5" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#070474">RTPM</text></svg>
+          <div style="display: flex; align-items: center; gap: 32px;">
+            <span style="font-size: 15px; font-weight: 500; color: #15162b;">Platform</span>
+            <span style="font-size: 15px; font-weight: 600; color: #0d08d2; border-bottom: 2px solid #0d08d2; padding-bottom: 26px; margin-bottom: -28px;">By role</span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b;">By sector</span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b;">Governance</span>
+            <span style="font-size: 15px; font-weight: 500; color: #15162b;">Insight</span>
+          </div>
+          <span style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; background: #0d08d2; color: #ffffff; border-radius: 9px; font-size: 15px; font-weight: 600;">Book a working session</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 268px; border-bottom: 1px solid #e6e6f0;">
+          <div style="padding: 28px 24px; border-right: 1px solid #f0f0f5;">
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 12px;">Executive</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #0d08d2; font-weight: 500; margin-bottom: 12px;">"Which projects threaten COD or the capital envelope?"</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 14px;">Portfolio exposure, ranked, with the accountable name against each project.</div>
+            <div style="font-size: 13px; font-weight: 600; color: #0d08d2;">Executive view →</div>
+          </div>
+          <div style="padding: 28px 24px; border-right: 1px solid #f0f0f5;">
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 12px;">Project Director</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #0d08d2; font-weight: 500; margin-bottom: 12px;">"What is late, and who is holding it?"</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 14px;">Live register, risk matrix and approval queues without waiting for a monthly cycle.</div>
+            <div style="font-size: 13px; font-weight: 600; color: #0d08d2;">Director view →</div>
+          </div>
+          <div style="padding: 28px 24px; border-right: 1px solid #f0f0f5;">
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 12px;">PMO &amp; Controls</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #0d08d2; font-weight: 500; margin-bottom: 12px;">"Is the control process actually being run?"</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 14px;">Register currency, contractual clocks, ageing by workstream and by holder.</div>
+            <div style="font-size: 13px; font-weight: 600; color: #0d08d2;">PMO view →</div>
+          </div>
+          <div style="padding: 28px 24px; border-right: 1px solid #f0f0f5;">
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 12px;">CIO &amp; IT</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #0d08d2; font-weight: 500; margin-bottom: 12px;">"Where does the data live and who can reach it?"</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 14px;">Tenant-native deployment, identity, residency, and the AI approval boundary.</div>
+            <div style="font-size: 13px; font-weight: 600; color: #0d08d2;">IT view →</div>
+          </div>
+          <div style="padding: 28px 24px; border-right: 1px solid #f0f0f5;">
+            <div style="font-size: 15px; font-weight: 600; margin-bottom: 12px;">Procurement</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: #0d08d2; font-weight: 500; margin-bottom: 12px;">"What are we signing, and how do we leave?"</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #595b78; margin-bottom: 14px;">Commercial model, support terms, portability and exit, stated before the call.</div>
+            <div style="font-size: 13px; font-weight: 600; color: #0d08d2;">Procurement view →</div>
+          </div>
+          <div style="padding: 28px 24px; background: #fafafd;">
+            <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8ca6; margin-bottom: 14px;">Or by sector</div>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="font-size: 14px; font-weight: 600; color: #15162b;">Renewables →</div>
+              <div style="font-size: 14px; font-weight: 600; color: #15162b;">Data centres →</div>
+            </div>
+            <div style="font-size: 12.5px; line-height: 1.5; color: #595b78; margin-top: 16px;">Placeholder: a visitor who does not identify with a role picks their sector instead.<br><br><strong style="color: #15162b; font-weight: 600;">No icons in this panel.</strong> Roles are not modules. The thirteen pictograms in RTPM 1. Core Tokens, section 07, are a module-only set and are never applied to a role, a sector or a page type.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 22px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">What changes per role page — and what never does</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+        <div style="font-size: 13px; line-height: 1.6; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Changes:</strong> the headline question, the product screens shown, the three outcomes listed, the proof format (portfolio table for executives, register for directors, ageing charts for PMO, architecture diagram for IT, terms for procurement), and the call to action's commitment level.</div>
+        <div style="font-size: 13px; line-height: 1.6; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">Never changes:</strong> the category line, the tenant statement, the header, the footer, the type scale, or the claim itself. Five entrances, one building — a director and a CIO comparing notes must recognise the same product.</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Write each role's question in their words, in quotes. It is the only copy they will read in the panel.</div>
+          <div>Give procurement and IT full pages, not a section of the FAQ. They are the two roles that stop deals.</div>
+          <div>Keep the sector rail in the panel so an unidentified visitor still has a route.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>List modules in the role panel. A role does not want a feature index.</div>
+          <div>Add a sixth role. Five is the buying group; more dilutes each argument.</div>
+          <div>Change the category line or the claim per role. That reads as a different product each time.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">C</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Sector routes</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Renewables · data centres</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Two sectors, two vocabularies</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">The same platform, described in the terms each sector already uses internally.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Credibility is vocabulary. A renewables director thinks in COD protection and grid connection; a data centre PMC thinks in RFS dates, OFCI scope and commissioning gates. Using the wrong noun costs the meeting.</div>
+      </div>
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Must include</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Two routes only. Each names the sector's own risk language, the roles it maps to, and the modules that carry the weight in that sector.</div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Layout rules</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Two equal cards on a light ground, no visual hierarchy between them — RTPM does not signal a preferred sector. Each card: sector, the failure it prevents, four terms in that sector's language, one route.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7; overflow-x: auto;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — sector selector section</div>
+      <div style="width: 1440px; box-sizing: border-box; background: #ffffff; border: 1px solid #dcdce8; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.08); padding: 56px 48px;">
+        <div style="max-width: 720px; margin-bottom: 40px;">
+          <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0d08d2; margin-bottom: 18px;">By sector</div>
+          <h3 style="font-size: 40px; font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 16px;">Placeholder section headline naming the sector split</h3>
+          <p style="font-size: 17px; line-height: 1.55; color: #595b78; margin: 0;">Placeholder line explaining that the control layer is the same and the risk language is not.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <div style="border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+            <div style="padding: 28px 28px 24px;">
+              <div style="font-size: 24px; font-weight: 600; margin-bottom: 10px;">Renewables</div>
+              <div style="font-size: 15px; line-height: 1.55; color: #595b78; margin-bottom: 24px;">Placeholder: the failure this sector is protecting against, in one sentence.</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; padding-top: 22px; border-top: 1px solid #f0f0f5;">
+                <div><div style="font-size: 14px; font-weight: 600;">COD protection</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Slip against commercial operation date, in days</div></div>
+                <div><div style="font-size: 14px; font-weight: 600;">Grid connection</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Maturation phases and third-party dependency</div></div>
+                <div><div style="font-size: 14px; font-weight: 600;">Contractor risk</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Multi-package exposure and interface management</div></div>
+                <div><div style="font-size: 14px; font-weight: 600;">Permit &amp; consent</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Authority clocks that no contractor controls</div></div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid #e6e6f0; background: #fafafd; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 13.5px; color: #595b78;">Owners · IPPs · EPC oversight</span>
+              <span style="font-size: 14px; font-weight: 600; color: #0d08d2;">Renewables route →</span>
+            </div>
+          </div>
+          <div style="border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+            <div style="padding: 28px 28px 24px;">
+              <div style="font-size: 24px; font-weight: 600; margin-bottom: 10px;">Data centres</div>
+              <div style="font-size: 15px; line-height: 1.55; color: #595b78; margin-bottom: 24px;">Placeholder: the failure this sector is protecting against, in one sentence.</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; padding-top: 22px; border-top: 1px solid #f0f0f5;">
+                <div><div style="font-size: 14px; font-weight: 600;">PMC reporting</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">One record across owner, PMC and trades</div></div>
+                <div><div style="font-size: 14px; font-weight: 600;">RFS date</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Ready-for-service exposure by hall and phase</div></div>
+                <div><div style="font-size: 14px; font-weight: 600;">OFCI scope</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Owner-furnished interfaces and delivery risk</div></div>
+                <div><div style="font-size: 14px; font-weight: 600;">Commissioning gates</div><div style="font-size: 13px; line-height: 1.45; color: #8a8ca6; margin-top: 3px;">Level gates, witness sign-off, evidence trail</div></div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid #e6e6f0; background: #fafafd; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 13.5px; color: #595b78;">Hyperscale · colocation · PMC</span>
+              <span style="font-size: 14px; font-weight: 600; color: #0d08d2;">Data centre route →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Use each sector's own abbreviations — COD, RFS, OFCI. Spelling them out signals an outsider.</div>
+          <div>Keep the two cards visually identical. Ranking sectors loses the one you ranked second.</div>
+          <div>Name the buyer types in the card footer so a visitor can self-identify.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Add a third sector before there is delivery experience in it.</div>
+          <div>Illustrate sectors with turbine or server-rack imagery. Use real product screens.</div>
+          <div>Duplicate the whole site per sector. Two routes converge on one platform story.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">D</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Procurement credibility layer</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">The page that decides whether there is a deal</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Answers before the call</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Data residency, governance, AI approval, exit and portability — stated in public, in writing.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">A small vendor selling into a utility or a hyperscaler fails on procurement, not on product. Publishing the answers removes the reason to disqualify RTPM early, and signals that the questions were expected.</div>
+      </div>
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Must include</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Four sections, each with a plain statement and a downloadable artefact: data residency, governance and access, AI human-in-the-loop approval, exit and portability. A named contact, not a form.</div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Layout rules</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Document-like, not marketed: navy band at the top carrying the position, then a light two-column body of question and answer. Every answer is a sentence a buyer can paste into a tender response.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7; overflow-x: auto;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — governance page</div>
+      <div style="width: 1440px; background: #ffffff; border: 1px solid #dcdce8; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.08);">
+
+        <div style="background: #070474; padding: 52px 48px 48px; color: #ffffff; position: relative; overflow: hidden;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(700px 520px at 88% 10%, rgba(13,8,210,0.7) 0%, rgba(7,4,116,0) 70%);"></div>
+          <div style="position: relative; max-width: 860px;">
+            <div style="font-size: 13.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #cfceff; margin-bottom: 20px;">Governance &amp; procurement</div>
+            <h3 style="font-size: 44px; font-weight: 600; line-height: 1.14; letter-spacing: -0.018em; margin: 0 0 20px;">Runs inside your tenant. Your data never leaves your governance.</h3>
+            <p style="font-size: 17px; line-height: 1.55; color: #cfceff; margin: 0 0 28px;">Placeholder paragraph stating the deployment position in one plain sentence a CIO can forward.</p>
+            <div style="display: flex; gap: 12px;">
+              <span style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; background: #ffcc00; color: #15162b; border-radius: 9px; font-size: 15px; font-weight: 600;">Download the governance pack</span>
+              <span style="display: inline-flex; align-items: center; height: 48px; padding: 0 22px; border: 1px solid rgba(255,255,255,0.32); color: #ffffff; border-radius: 9px; font-size: 15px; font-weight: 600;">Speak to Henning directly</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 48px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px;">
+            <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 26px 28px;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                <span style="width: 8px; height: 8px; border-radius: 999px; background: #0d08d2;"></span>
+                <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #595b78;">Data residency</div>
+              </div>
+              <div style="font-size: 20px; font-weight: 600; line-height: 1.3; margin-bottom: 12px;">Where the record physically lives</div>
+              <div style="font-size: 14.5px; line-height: 1.6; color: #595b78; margin-bottom: 18px;">Placeholder answer. Names the tenant, the region, and what — if anything — leaves it. Written as a tender-ready statement.</div>
+              <div style="display: flex; flex-direction: column; gap: 9px; padding-top: 16px; border-top: 1px solid #f0f0f5;">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Placeholder residency fact</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Placeholder residency fact</div>
+                <div style="font-size: 13.5px; font-weight: 600; color: #0d08d2; margin-top: 4px;">Residency statement (PDF) →</div>
+              </div>
+            </div>
+            <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 26px 28px;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                <span style="width: 8px; height: 8px; border-radius: 999px; background: #0d08d2;"></span>
+                <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #595b78;">Governance &amp; access</div>
+              </div>
+              <div style="font-size: 20px; font-weight: 600; line-height: 1.3; margin-bottom: 12px;">Who can see what, and who decided</div>
+              <div style="font-size: 14.5px; line-height: 1.6; color: #595b78; margin-bottom: 18px;">Placeholder answer. Identity through the customer's own directory, role-based access, and an audit trail that cannot be edited.</div>
+              <div style="display: flex; flex-direction: column; gap: 9px; padding-top: 16px; border-top: 1px solid #f0f0f5;">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Placeholder access fact</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Placeholder access fact</div>
+                <div style="font-size: 13.5px; font-weight: 600; color: #0d08d2; margin-top: 4px;">Access model (PDF) →</div>
+              </div>
+            </div>
+            <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 26px 28px;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                <span style="width: 8px; height: 8px; border-radius: 999px; background: #e0a800;"></span>
+                <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #595b78;">AI approval boundary</div>
+              </div>
+              <div style="font-size: 20px; font-weight: 600; line-height: 1.3; margin-bottom: 12px;">The agent proposes, a named human disposes</div>
+              <div style="font-size: 14.5px; line-height: 1.6; color: #595b78; margin-bottom: 18px;">Placeholder answer. The agent drafts and stages; it never sends, never changes a status, never closes a record. Every accepted draft names its approver in the trail.</div>
+              <div style="display: flex; flex-direction: column; gap: 9px; padding-top: 16px; border-top: 1px solid #f0f0f5;">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Human-in-the-loop on every write</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Agent features can be disabled per tenant</div>
+                <div style="font-size: 13.5px; font-weight: 600; color: #0d08d2; margin-top: 4px;">AI governance note (PDF) →</div>
+              </div>
+            </div>
+            <div style="border: 1px solid #e6e6f0; border-radius: 14px; padding: 26px 28px;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                <span style="width: 8px; height: 8px; border-radius: 999px; background: #0d08d2;"></span>
+                <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #595b78;">Exit &amp; portability</div>
+              </div>
+              <div style="font-size: 20px; font-weight: 600; line-height: 1.3; margin-bottom: 12px;">How you leave, and what you take</div>
+              <div style="font-size: 14.5px; line-height: 1.6; color: #595b78; margin-bottom: 18px;">Placeholder answer. Export format, what is included, how long it takes, and what happens to the audit trail. Stated before signature, not after.</div>
+              <div style="display: flex; flex-direction: column; gap: 9px; padding-top: 16px; border-top: 1px solid #f0f0f5;">
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Placeholder portability fact</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex: none;">✓</span>Placeholder portability fact</div>
+                <div style="font-size: 13.5px; font-weight: 600; color: #0d08d2; margin-top: 4px;">Exit terms (PDF) →</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="border: 1px solid #e6e6f0; border-radius: 14px; overflow: hidden;">
+            <div style="padding: 20px 28px; border-bottom: 1px solid #e6e6f0; display: flex; align-items: center; justify-content: space-between;">
+              <div style="font-size: 17px; font-weight: 600;">Tender question bank</div>
+              <span style="font-size: 13.5px; color: #8a8ca6;">Placeholder — the questions we are asked most, answered once</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1.1fr 1.9fr;">
+              <div style="padding: 18px 28px; border-right: 1px solid #f0f0f5; border-bottom: 1px solid #f0f0f5; font-size: 14.5px; font-weight: 500;">Placeholder question one</div>
+              <div style="padding: 18px 28px; border-bottom: 1px solid #f0f0f5; font-size: 14.5px; line-height: 1.55; color: #595b78;">Placeholder answer written as a single paste-ready sentence.</div>
+              <div style="padding: 18px 28px; border-right: 1px solid #f0f0f5; border-bottom: 1px solid #f0f0f5; font-size: 14.5px; font-weight: 500;">Placeholder question two</div>
+              <div style="padding: 18px 28px; border-bottom: 1px solid #f0f0f5; font-size: 14.5px; line-height: 1.55; color: #595b78;">Placeholder answer written as a single paste-ready sentence.</div>
+              <div style="padding: 18px 28px; border-right: 1px solid #f0f0f5; font-size: 14.5px; font-weight: 500;">Placeholder question three</div>
+              <div style="padding: 18px 28px; font-size: 14.5px; line-height: 1.55; color: #595b78;">Placeholder answer written as a single paste-ready sentence.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Write answers a buyer can paste into a tender response unedited. That is the whole test.</div>
+          <div>Publish exit terms. A vendor confident about leaving is a vendor worth entering.</div>
+          <div>Use the one gold action of the page here, on the navy band, for the governance pack.</div>
+          <div>Offer a named person instead of a form. Procurement trusts accountability, not funnels.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Gate the governance pack behind a form. The point is to remove friction, not harvest an email.</div>
+          <div>Claim a certification RTPM does not hold. One unverifiable badge voids the page.</div>
+          <div>Market on this page. It is a document, and its restraint is the argument.</div>
+          <div>Bury AI governance in a footnote. For this audience it is a first-tier question.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">E</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Surface rhythm</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Three surfaces · no new token</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">A surface change signals a change of purpose</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Not alternation. Stripes stop meaning anything by the third one.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e6e6f0;">
+      <div style="padding: 22px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Purpose</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">A long page needs orientation without navigation. Three surfaces give a reader landmarks: this section argues, this section shows, this section is the commitment. The rhythm does the work a subheading cannot.</div>
+      </div>
+      <div style="padding: 22px 24px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 10px;">Design principles</div>
+        <div style="font-size: 13.5px; line-height: 1.6;">Three surfaces, all already locked in Step 1 — no colour is added for this. The tone change is the boundary, so no rule is drawn between sections. Never two tinted sections in a row: adjacent tints merge and the boundary disappears.</div>
+      </div>
+    </div>
+    <div style="padding: 22px 24px; border-top: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Mobile breakpoints</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Hero stacks under 768px</strong>The 52/48 split becomes one column, text above the workflow sequence. Single-column stacking and the 16px gutter follow RTPM 3, section 09 — no separate mobile grid is defined here.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Role panel becomes an accordion</strong>Hover and focus do not exist on a touch screen, so the five-column dropdown becomes a tap-based accordion, one role open at a time. Rows keep the 48px target from RTPM 3.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Sector cards stack</strong>The two cards go vertical under 768px in the same order, neither promoted. Card radius, spacing and type floor are unchanged from the desktop rule.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7; overflow-x: auto;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example — the three permitted surfaces</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; min-width: 900px;">
+        <div style="border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="height: 140px; background: #ffffff; padding: 22px 24px;">
+            <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0d08d2; margin-bottom: 12px;">Section label</div>
+            <div style="font-size: 22px; font-weight: 600; line-height: 1.25; color: #15162b;">Argument set on paper white</div>
+          </div>
+          <div style="padding: 16px 20px; border-top: 1px solid #e6e6f0; background: #ffffff;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 14px; font-weight: 600;">Paper White</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#FFFFFF</span></div>
+            <div style="font-size: 12.5px; line-height: 1.5; color: #8a8ca6;">The default. Argument, explanation, narrative. Roughly two thirds of any page.</div>
+          </div>
+        </div>
+        <div style="border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="height: 140px; background: #f7f7fb; padding: 22px 24px;">
+            <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0d08d2; margin-bottom: 12px;">Section label</div>
+            <div style="font-size: 22px; font-weight: 600; line-height: 1.25; color: #15162b;">Evidence set on the tint</div>
+          </div>
+          <div style="padding: 16px 20px; border-top: 1px solid #e6e6f0; background: #ffffff;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 14px; font-weight: 600;">Page tint</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#F7F7FB</span></div>
+            <div style="font-size: 12.5px; line-height: 1.5; color: #8a8ca6;">Proof: product screens, sector routes, workflow sequences, question banks. Cards on it stay white, so screenshots lift off the ground.</div>
+          </div>
+        </div>
+        <div style="border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="height: 140px; background: #070474; padding: 22px 24px; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(240px 200px at 88% 12%, rgba(13,8,210,0.75) 0%, rgba(7,4,116,0) 70%);"></div>
+            <div style="position: relative;">
+              <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 12px;">Section label</div>
+              <div style="font-size: 22px; font-weight: 600; line-height: 1.25; color: #ffffff;">The commitment, on navy</div>
+            </div>
+          </div>
+          <div style="padding: 16px 20px; border-top: 1px solid #e6e6f0; background: #ffffff;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;"><span style="font-size: 14px; font-weight: 600;">Ink Navy</span><span style="font-family: ui-monospace, monospace; font-size: 12.5px; color: #595b78;">#070474</span></div>
+            <div style="font-size: 12.5px; line-height: 1.5; color: #8a8ca6;">Once per page, always the trust claim. Twice only when the footer is the second. Carries the page's one gold action.</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 24px; min-width: 900px;">
+        <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 14px;">Homepage rhythm — five earned changes</div>
+        <div style="display: flex; border: 1px solid #dcdce8; border-radius: 12px; overflow: hidden;">
+          <div style="flex: 2.2; background: #ffffff; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Hero</div><div style="font-size: 12px; color: #8a8ca6;">White</div></div>
+          <div style="flex: 1; background: #f7f7fb; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Role bar</div><div style="font-size: 12px; color: #8a8ca6;">Tint</div></div>
+          <div style="flex: 2; background: #ffffff; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">How it works</div><div style="font-size: 12px; color: #8a8ca6;">White</div></div>
+          <div style="flex: 2; background: #f7f7fb; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Sector routes</div><div style="font-size: 12px; color: #8a8ca6;">Tint</div></div>
+          <div style="flex: 1.6; background: #070474; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Governance</div><div style="font-size: 12px; color: #cfceff;">Navy · one gold action</div></div>
+          <div style="flex: 1.4; background: #ffffff; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Closing</div><div style="font-size: 12px; color: #8a8ca6;">White</div></div>
+          <div style="flex: 1.4; background: #070474; padding: 20px 18px;"><div style="font-size: 13px; font-weight: 600; margin-bottom: 4px; color: #ffffff;">Footer</div><div style="font-size: 12px; color: #cfceff;">Navy</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e6e6f0;">
+      <div style="padding: 20px 24px; border-right: 1px solid #e6e6f0;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #e8f6eb; color: #1b7a31; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">✓</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b7a31;">Do</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Change surface only where the section's job changes. Five changes on a long page is right.</div>
+          <div>Keep cards white on the tint so product screens lift off the ground.</div>
+          <div>Let the navy band carry the page's single gold action.</div>
+          <div>Open and close the body on white. Navy is a punctuation mark, not a chapter.</div>
+        </div>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #fdecee; color: #b02a34; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">×</span><span style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b02a34;">Don't</span></div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 13px; line-height: 1.5; color: #595b78;">
+          <div>Alternate white and tint section by section. That is a stripe, not a structure.</div>
+          <div>Place two tinted sections next to each other. They merge and the boundary is lost.</div>
+          <div>Draw a rule between two surfaces. The tone change is already the boundary.</div>
+          <div>Introduce a fourth surface, or tint a section a different colour to "break it up".</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">F</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Footer &amp; page templates</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">The site's shell and the five remaining page types</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Site footer</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">The only place lockup B appears, and where residency is restated.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 12px;">Layout rules</div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Navy, once per page</strong>If the page already used its navy band, the footer is the second and last — the only exception to one band per page.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Four columns</strong>Platform, By role, By sector, Company. Governance sits under Company, not buried in legal.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Lockup B here</strong>The footer is a cold-contact context — a visitor may arrive deep from search. Descriptor is permitted.</div>
+        <div style="font-size: 13px; line-height: 1.55; color: #595b78;"><strong style="color: #15162b; font-weight: 600; display: block; margin-bottom: 3px;">Residency line</strong>Tenant and region restated in the legal row. It costs one line and answers the recurring question.</div>
+      </div>
+    </div>
+    <div style="padding: 32px 24px; background: #f2f2f7; overflow-x: auto;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #595b78; margin-bottom: 18px;">Visual example</div>
+      <div style="width: 1440px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(21,22,43,0.08);">
+        <div style="background: #070474; padding: 52px 48px 0; color: #ffffff;">
+          <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px;">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 52" role="img" aria-label="RTPM Project Control" style="height: 44px; width: auto; display: block; margin-bottom: 20px;"><g fill="#ffffff"><path d="M0 0H24.65V15.18H15.18V24.65H0Z"></path><path d="M52 0V24.65H36.82V15.18H27.35V0Z"></path><path d="M0 52V27.35H15.18V36.82H24.65V52Z"></path><path d="M52 52H27.35V36.82H36.82V27.35H52Z"></path></g><text x="67" y="33.1" font-family="Barlow Semi Condensed" font-weight="700" font-size="46" letter-spacing="-1.564" fill="#ffffff">RTPM</text><text x="67" y="52" font-family="Inter" font-weight="500" font-size="13" letter-spacing="0.13" fill="#cfceff">Project Control</text></svg>
+              <div style="font-size: 14.5px; line-height: 1.6; color: #cfceff; max-width: 300px;">Customer-side control layer for complex capital projects. Placeholder line naming the company position.</div>
+            </div>
+            <div>
+              <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #cfceff; margin-bottom: 16px;">Platform</div>
+              <div style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; color: #ffffff;">
+                <div>Control layer</div><div>Registers</div><div>Reporting</div><div>Agents</div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #cfceff; margin-bottom: 16px;">By role</div>
+              <div style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; color: #ffffff;">
+                <div>Executive</div><div>Project Director</div><div>PMO &amp; Controls</div><div>CIO &amp; IT</div><div>Procurement</div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #cfceff; margin-bottom: 16px;">By sector</div>
+              <div style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; color: #ffffff;">
+                <div>Renewables</div><div>Data centres</div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #cfceff; margin-bottom: 16px;">Company</div>
+              <div style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; color: #ffffff;">
+                <div>About</div><div>Governance</div><div>Insight</div><div>Contact</div>
+              </div>
+            </div>
+          </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.18); padding: 22px 0 32px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 28px; font-size: 13.5px; color: #cfceff;">
+              <span>© 2026 Real Time Project Management</span>
+              <span>Privacy</span>
+              <span>Terms</span>
+              <span>Data residency: customer tenant, EU region</span>
+            </div>
+            <div style="font-size: 13.5px; color: #cfceff;">LinkedIn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 24px; border-bottom: 1px solid #e6e6f0;">
+      <div>
+        <div style="font-size: 17px; font-weight: 600;">Remaining page types</div>
+        <div style="font-size: 13px; color: #8a8ca6; margin-top: 3px;">Specified as structure. Each is assembled from patterns already locked — none needs a new one.</div>
+      </div>
+      <span style="flex: none; display: inline-flex; align-items: center; gap: 7px; background: #fff3e5; color: #b36200; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate for locking</span>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; background: #fafafd; border-bottom: 1px solid #e6e6f0; padding: 11px 24px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595b78;">
+      <div>Page</div><div>Structure</div><div>Reuses</div><div>Status</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+      <div style="font-weight: 600;">Module page</div>
+      <div style="color: #595b78; line-height: 1.55;">Problem framing, one real product screen, three outcomes, the workflow sequence, one action. One page per module — Risk, Documents, Correspondence, Change, Compliance. The page header carries that module’s icon from RTPM 1. Core Tokens, section 07, at 24px beside the title — the same icon shown in the product screenshot on that page, so a visitor sees continuity between the marketing claim and the product. 24px is the "cards and standalone placements" tier, not the 20px sidebar tier: this is a standalone page header, not a dense list.</div>
+      <div style="color: #595b78; line-height: 1.55;">Hero split · workflow sequence · register screenshot</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+      <div style="font-weight: 600;">Role page</div>
+      <div style="color: #595b78; line-height: 1.55;">The role's question as the headline, the proof format that role trusts, three outcomes, and a commitment-matched action. Five instances of one template.</div>
+      <div style="color: #595b78; line-height: 1.55;">Hero split · dashboard screens · sector rail</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+      <div style="font-weight: 600;">Commercial model</div>
+      <div style="color: #595b78; line-height: 1.55;">How RTPM is priced and what is included, as a structure rather than a tier grid. No published figures until the model is fixed — an empty pricing table costs more credibility than an honest explanation.</div>
+      <div style="color: #595b78; line-height: 1.55;">Governance page layout · question bank</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #8a6600;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #e0a800;"></span>Blocked on model</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+      <div style="font-weight: 600;">About</div>
+      <div style="color: #595b78; line-height: 1.55;">Henning's real position and why RTPM exists, in first person. No invented team bios, no advisory board that does not exist. One portrait, the cold-contact lockup, a direct contact line.</div>
+      <div style="color: #595b78; line-height: 1.55;">Article layout · lockup B</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;">
+      <div style="font-weight: 600;">Insight article</div>
+      <div style="color: #595b78; line-height: 1.55;">Header art from the Step 2 article banner, 720px measure, 19px body, byline with portrait, related links in the footer. Where LinkedIn long-form is repurposed and owned.</div>
+      <div style="color: #595b78; line-height: 1.55;">Step 2 article banner · footer</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;">
+      <div style="font-weight: 600;">Working session</div>
+      <div style="color: #595b78; line-height: 1.55;">The contact page. Four fields, no qualification quiz, and a plain statement of what the session is: a look at one of their own workflows, not a demo script.</div>
+      <div style="color: #595b78; line-height: 1.55;">Form patterns from the record panel</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1.1fr 2fr 1.6fr 1fr; align-items: start; padding: 15px 24px; font-size: 13px;">
+      <div style="font-weight: 600;">Case study</div>
+      <div style="color: #595b78; line-height: 1.55;">Held. Nothing is built and nothing is populated until a real project outcome exists and the client has approved its publication.</div>
+      <div style="color: #595b78; line-height: 1.55;">—</div>
+      <div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #595b78;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #8a8ca6;"></span>On hold</span></div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 16px; padding-bottom: 16px; border-bottom: 2px solid #15162b; margin: 80px 0 32px;">
+    <span style="font-family: 'Barlow Semi Condensed', sans-serif; font-size: 15px; font-weight: 700; color: #0d08d2; letter-spacing: 0.14em;">G</span>
+    <h2 style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 40px; margin: 0; letter-spacing: -0.005em;">Lock tracker</h2>
+    <span style="font-size: 13px; color: #8a8ca6; margin-left: auto;">Step 4 · website architecture</span>
+  </div>
+
+  <div style="background: #ffffff; border: 1px solid #e6e6f0; border-radius: 16px; overflow: hidden; margin-bottom: 24px;">
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; background: #fafafd; border-bottom: 1px solid #e6e6f0; padding: 11px 24px; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595b78;">
+      <div>Sect.</div><div>Component</div><div>Inherits</div><div>Status</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">—</div><div style="font-weight: 500;">Inter-only rule for the website</div><div style="color: #595b78; font-size: 12.5px;">Step 1 typography</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">A</div><div style="font-weight: 500;">Site header</div><div style="color: #595b78; font-size: 12.5px;">Lockup A · button hierarchy</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">A</div><div style="font-weight: 500;">Homepage above the fold</div><div style="color: #595b78; font-size: 12.5px;">Workflow sequence · tenant statement</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">A</div><div style="font-weight: 500;">Role bar under the fold</div><div style="color: #595b78; font-size: 12.5px;">Role-based navigation</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">B</div><div style="font-weight: 500;">By-role navigation panel</div><div style="color: #595b78; font-size: 12.5px;">Five-role buying group</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">B</div><div style="font-weight: 500;">What changes per role, what never does</div><div style="color: #595b78; font-size: 12.5px;">Category line · tenant statement</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">C</div><div style="font-weight: 500;">Two sector routes</div><div style="color: #595b78; font-size: 12.5px;">Sector vocabularies</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">D</div><div style="font-weight: 500;">Procurement credibility layer</div><div style="color: #595b78; font-size: 12.5px;">Agent governance · audit trail</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px;"><div style="color: #8a8ca6;">D</div><div style="font-weight: 500;">Tender question bank</div><div style="color: #595b78; font-size: 12.5px;">—</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; border-bottom: 1px solid #f0f0f5; font-size: 13px; background: #fafafd;"><div style="color: #8a8ca6;">E</div><div style="font-weight: 500;">Surface rhythm — three surfaces</div><div style="color: #595b78; font-size: 12.5px;">Step 1 neutrals · Ink Navy</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="display: grid; grid-template-columns: 0.5fr 2fr 1.8fr 1fr; align-items: center; padding: 12px 24px; font-size: 13px;"><div style="color: #8a8ca6;">F</div><div style="font-weight: 500;">Site footer</div><div style="color: #595b78; font-size: 12.5px;">Lockup B · residency line</div><div><span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #b36200;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #ff8b00;"></span>Candidate</span></div></div>
+    <div style="padding: 18px 24px; border-top: 1px solid #e6e6f0; background: #f7f7fb; font-size: 13px; line-height: 1.6; color: #595b78;"><strong style="color: #15162b; font-weight: 600;">System complete.</strong> With Step 4 locked, all four surfaces of the brand system are specified: foundations and the mark, the product design language, the completion set, the marketing templates, and the website. Every page type on rtpm.dk is assembled from patterns already in the system — no new component was invented for this surface.</div>
+  </div>
+
+  <div style="background: #070474; border-radius: 16px; padding: 32px 36px; color: #ffffff;">
+    <div style="font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.1; margin-bottom: 18px;">Three decisions for <span style="color: #ffcc00;">Henning</span></div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;"><div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">01 · Primary action wording</div><div style="font-size: 13.5px; line-height: 1.55;">"Book a working session" instead of "Request a demo" — it promises a look at their own workflow, not a pitch. It also raises the commitment. Confirm, or name the wording you use in outreach today.</div></div>
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;"><div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">02 · Publishing exit terms</div><div style="font-size: 13.5px; line-height: 1.55;">The governance page publishes exit and portability openly, ungated. That is unusual and it is the strongest signal on the site. Confirm you are willing to commit those terms in public.</div></div>
+      <div style="border-top: 2px solid rgba(255,255,255,0.22); padding-top: 14px;"><div style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #cfceff; margin-bottom: 8px;">03 · No pricing page</div><div style="font-size: 13.5px; line-height: 1.55;">Commercial model is described in structure with no figures until the model is fixed. The alternative is a tier grid you would have to defend. Say which you want live at launch.</div></div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>
