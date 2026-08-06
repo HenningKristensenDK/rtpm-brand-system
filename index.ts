@@ -11,4 +11,9 @@ export { Card } from './components/Card';
 export type { CardProps, CardPadding } from './components/Card';
 
 export { Kpi } from './components/Kpi';
-export type { KpiProps, KpiOwner, KpiTrend } from './components/Kpi';
+export type {
+  KpiProps,
+  KpiOwner,
+  KpiTrendDirection,
+  KpiGoodDirection,
+} from './components/Kpi';

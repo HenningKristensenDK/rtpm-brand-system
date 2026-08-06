@@ -5,7 +5,15 @@ export interface KpiOwner {
   org?: string;
 }
 
-export type KpiTrend = 'up' | 'down' | 'flat';
+export type KpiTrendDirection = 'up' | 'down' | 'flat';
+
+/**
+ * Which direction counts as "good news" for this specific metric.
+ * Open incidents falling is good ('down-is-good'). Active users rising
+ * is good ('up-is-good'). This is what decides the trend color — not
+ * the raw direction alone.
+ */
+export type KpiGoodDirection = 'up-is-good' | 'down-is-good';
 
 export interface KpiProps {
   label: string;
@@ -17,23 +25,49 @@ export interface KpiProps {
    * structural — you cannot render a <Kpi /> without one.
    */
   owner: KpiOwner;
-  trend?: KpiTrend;
+  trend?: KpiTrendDirection;
   trendValue?: string;
+  /**
+   * Required whenever `trend` is passed. Without it there is no way to
+   * know whether "up" or "down" is the good outcome for this metric —
+   * guessing (e.g. always green-up/red-down) produces a KPI that
+   * contradicts its own number, exactly the kind of unaccountable
+   * figure this component exists to prevent.
+   */
+  goodDirection?: KpiGoodDirection;
 }
 
-/**
- * RTPM Kpi
- *
- * A single measured figure, always attributed. Value uses tabular
- * numerals so a stack of KPIs aligns visually even as digits change.
- */
-export function Kpi({ label, value, owner, trend, trendValue }: KpiProps) {
+export function Kpi({
+  label,
+  value,
+  owner,
+  trend,
+  trendValue,
+  goodDirection,
+}: KpiProps) {
+  if (trend && trend !== 'flat' && !goodDirection) {
+    // Fail loudly in development rather than silently picking a color
+    // that might contradict the metric's real meaning.
+    console.warn(
+      `Kpi "${label}": trend="${trend}" was passed without goodDirection. ` +
+        `Trend color cannot be determined correctly — pass goodDirection ` +
+        `("up-is-good" or "down-is-good") or omit trend.`
+    );
+  }
+
+  const isGoodNews = (() => {
+    if (!trend || trend === 'flat') return null;
+    if (!goodDirection) return null; // unknown — render neutral, not a guess
+    if (goodDirection === 'up-is-good') return trend === 'up';
+    return trend === 'down'; // 'down-is-good'
+  })();
+
   const trendColor =
-    trend === 'up'
+    isGoodNews === null
+      ? 'var(--color-text-muted)'
+      : isGoodNews
       ? 'var(--color-status-low)'
-      : trend === 'down'
-      ? 'var(--color-status-critical)'
-      : 'var(--color-text-muted)';
+      : 'var(--color-status-critical)';
 
   const trendGlyph = trend === 'up' ? '▲' : trend === 'down' ? '▼' : '—';
 
