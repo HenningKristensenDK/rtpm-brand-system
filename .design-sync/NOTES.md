@@ -53,6 +53,23 @@ permanent, and avoids a maintenance surface. **If a future component name is
 all-caps (an acronym), rename it before syncing** — don't rely on
 `componentSrcMap` to rescue it.
 
+## Third sync (2026-08-06): Kpi contract change (goodDirection)
+`Kpi`'s trend prop was split into `trend: KpiTrendDirection` +
+`goodDirection?: KpiGoodDirection` — the old naive up=green/down=red logic
+was wrong for metrics where a rising number is bad (e.g. churn, resolution
+time). Re-authored the `Kpi` preview around the real axis this introduces:
+`GoodDirection` sweeps all 4 combinations (up-is-good × up/down,
+down-is-good × up/down) so the color logic is actually exercised both ways,
+plus `MissingGoodDirection` demonstrating the safe neutral fallback when
+`goodDirection` is omitted (also logs a dev `console.warn`, not visible in a
+static screenshot). Verified the fix pixel-by-pixel (no PIL/ImageMagick on
+this machine — wrote a throwaway PNG decoder) rather than eyeballing colors,
+since red vs. green is exactly the thing this fix changes and a
+misjudgment here would ship the same bug back into the design agent's
+reference. The driver correctly cleared Kpi's old grade on the contract
+change and left the other 4 components untouched — no manual intervention
+needed.
+
 ## Re-sync risks
 - If more components are added to `components/` without also being
   re-exported from root `index.ts`, they won't be discovered (the converter
