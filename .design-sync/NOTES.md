@@ -32,6 +32,27 @@ Previews: `Button` (Variants/Sizes/Disabled), `StatusPill` (AllStatuses, all
 5 levels), `StatusStepper` (InProgress, Overdue). All graded `good` on first
 pass, no known render warns to track.
 
+## Second sync (2026-08-06): Card + Kpi added
+Added `Card` and `Kpi` (renamed from `KPI` — see below). Both authored with
+rich previews on this sync (`Card`: Variants/Padding; `Kpi`: TrendStates) —
+kept the "author everything" precedent from the first sync rather than
+leaving them as floor cards.
+
+**Converter limitation found — all-caps component names silently drop.**
+The original component was named `KPI`. The discovery heuristic
+(`isComponentName` in `lib/dts.mjs`) excludes any export matching
+`^[A-Z][A-Z0-9_]+$` (treated as an enum/constant, not a component) —
+`cfg.componentSrcMap` can add the name back at the first filter pass
+(`lib/source-kit.mjs`), but `package-build.mjs`'s SECOND filter pass
+(around the "excluded N enum/type/context/hook exports" log line) re-applies
+the same heuristic unconditionally, with no override that survives it. There
+is no documented config field that exempts a pinned name from that second
+pass. Renamed `KPI` → `Kpi` (also `KPIProps`→`KpiProps`, `KPIOwner`→`KpiOwner`,
+`KPITrend`→`KpiTrend`) rather than forking the converter script — cheaper,
+permanent, and avoids a maintenance surface. **If a future component name is
+all-caps (an acronym), rename it before syncing** — don't rely on
+`componentSrcMap` to rescue it.
+
 ## Re-sync risks
 - If more components are added to `components/` without also being
   re-exported from root `index.ts`, they won't be discovered (the converter

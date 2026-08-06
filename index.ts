@@ -10,5 +10,5 @@ export type { StatusStepperProps, Step, StepState } from './components/StatusSte
 export { Card } from './components/Card';
 export type { CardProps, CardPadding } from './components/Card';
 
-export { KPI } from './components/KPI';
-export type { KPIProps, KPIOwner, KPITrend } from './components/KPI';
+export { Kpi } from './components/Kpi';
+export type { KpiProps, KpiOwner, KpiTrend } from './components/Kpi';

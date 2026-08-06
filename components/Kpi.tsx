@@ -1,33 +1,33 @@
 import React from 'react';
 
-export interface KPIOwner {
+export interface KpiOwner {
   name: string;
   org?: string;
 }
 
-export type KPITrend = 'up' | 'down' | 'flat';
+export type KpiTrend = 'up' | 'down' | 'flat';
 
-export interface KPIProps {
+export interface KpiProps {
   label: string;
   value: string;
   /**
    * Required, not optional. Per RTPM 0: "Every number has an owner. No
    * figure appears without the person and organisation accountable for
    * it. A KPI with no owner is decoration." This makes that rule
-   * structural — you cannot render a <KPI /> without one.
+   * structural — you cannot render a <Kpi /> without one.
    */
-  owner: KPIOwner;
-  trend?: KPITrend;
+  owner: KpiOwner;
+  trend?: KpiTrend;
   trendValue?: string;
 }
 
 /**
- * RTPM KPI
+ * RTPM Kpi
  *
  * A single measured figure, always attributed. Value uses tabular
  * numerals so a stack of KPIs aligns visually even as digits change.
  */
-export function KPI({ label, value, owner, trend, trendValue }: KPIProps) {
+export function Kpi({ label, value, owner, trend, trendValue }: KpiProps) {
   const trendColor =
     trend === 'up'
       ? 'var(--color-status-low)'
