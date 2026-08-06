@@ -21,7 +21,14 @@
    Entries marked [UNRATIFIED] appear in the five source files but were never
    declared as tokens in RTPM 1. They are captured so nothing silently drifts,
    and are listed in tokens/README.md for a decision.
+
+   Fonts: Inter and Barlow Semi Condensed are loaded from Google Fonts below,
+   matching the weights the five source HTML files themselves request. If a
+   consuming app already loads these (e.g. self-hosted), this import is
+   redundant but harmless — the browser dedupes identical stylesheet loads.
    ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 :root {
 

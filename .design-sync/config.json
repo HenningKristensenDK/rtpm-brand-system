@@ -1,0 +1,10 @@
+{
+  "projectId": "5a880be6-48d9-45e7-acf8-a6de6ac96832",
+  "pkg": "rtpm-design-system",
+  "globalName": "RTPM",
+  "shape": "package",
+  "buildCmd": "npm run build",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": "tokens/tokens.css",
+  "readmeHeader": ".design-sync/conventions.md"
+}
