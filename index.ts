@@ -17,3 +17,6 @@ export type {
   KpiTrendDirection,
   KpiGoodDirection,
 } from './components/Kpi';
+
+export { Logo } from './components/Logo';
+export type { LogoProps, LogoLockup, LogoColorway } from './components/Logo';
