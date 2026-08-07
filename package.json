@@ -13,11 +13,13 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./tokens/tokens.css": "./tokens/tokens.css"
+    "./tokens/tokens.css": "./tokens/tokens.css",
+    "./assets/logos/*": "./assets/logos/*"
   },
   "files": [
     "dist",
-    "tokens"
+    "tokens",
+    "assets"
   ],
   "scripts": {
     "build": "tsup index.ts --format esm,cjs --dts --out-dir dist"
