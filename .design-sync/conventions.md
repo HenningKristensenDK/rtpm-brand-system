@@ -34,6 +34,17 @@ Fixed rules worth respecting when composing screens: **at most one
 to do here"); status colors are fixed-meaning and never repurposed (critical
 = red, high = orange, medium = amber — never gold, low/done = green).
 
+## Logo — asset path is not automatic
+
+`<Logo lockup="A" colorway="navy" size={24} />` renders the real brand mark
+via `<img src="{assetsBasePath}/{filename}.svg">` — it does NOT bundle the
+SVGs inline. `assetsBasePath` defaults to `/assets/logos`, which resolves
+against WHATEVER app is rendering the design — there is no guarantee that
+path serves anything. Before relying on the default, set `assetsBasePath`
+to wherever the SVG files in this system's `assets/logos/` actually get
+hosted; otherwise the logo silently renders as a broken image. Never
+recreate the mark with divs/SVG-by-hand — always the real `Logo` component.
+
 ## Where the truth lives
 
 Read `tokens/tokens.css` before styling anything custom — it is the complete

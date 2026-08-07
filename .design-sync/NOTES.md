@@ -70,7 +70,79 @@ reference. The driver correctly cleared Kpi's old grade on the contract
 change and left the other 4 components untouched — no manual intervention
 needed.
 
+## Fourth sync (2026-08-07): Logo added — asset-hosting gap + two real SVG bugs
+
+Added `Logo`, which renders real SVG files from `assets/logos/` via
+`<img src="{assetsBasePath}/{filename}.svg">` rather than bundling them.
+This surfaced three separate, real problems — none of them design-sync
+tooling issues:
+
+**1. No hosting path for the SVGs.** `assetsBasePath` defaults to
+`/assets/logos`, which nothing serves in a sync preview or (likely) a
+Claude Design canvas. Fixed by shipping the actual `assets/logos/*.svg`
+files as part of the upload (added `assets/**` to the `finalize_plan`
+writes/deletes globs — NOT one of the base skill's standard globs, this
+repo-specific addition must be re-added on every future `finalize_plan`
+call for this project) and pointing the authored preview's
+`assetsBasePath` at `../../../assets/logos` (mirrors the exact relative
+depth `_vendor/react.js` already uses from `components/general/<Name>/`).
+**Re-copy `assets/logos/*.svg` into `ds-bundle/assets/logos/` after every
+`package-build.mjs`/`resync.mjs` run** — the build wipes and regenerates
+`--out` entirely, and this directory isn't part of what the converter
+copies itself.
+Documented the underlying gap in `conventions.md` too (the design agent
+must set `assetsBasePath` itself — there's no way to make the bare
+default work generically).
+
+**2. 8 of 13 logo SVGs used live `<text font-family="Barlow Semi
+Condensed">` / `<text font-family="Inter">` with no fallback family and
+no embedded font.** `<img>`-referenced SVGs cannot load external
+stylesheets/fonts at all (browser security model) — so any consumer
+without that exact font already installed got a wrong-metrics fallback
+font clipped by the tight viewBox, e.g. "RTPM" → "RTPI". This is a
+production bug independent of this sync (rtpm.dk itself would hit it).
+Fixed by converting all 8 to real vector outlines — downloaded
+Barlow Semi Condensed Bold and Inter Medium (static instance via
+`fonts.googleapis.com/css2?family=Inter:wght@500`, since Inter ships only
+as a variable font in google/fonts now) and used `opentype.js` to emit
+per-glyph `<path>` elements. Verified geometrically (computed bounding
+boxes match the original tight viewBox to within ~1.5px) before trusting
+the visual check.
+
+**3. A second, unrelated bug the outline conversion exposed:** the
+descriptor lockup's "Project Control" text has a 'j' whose descender hook
+extends to y=54.65, but the original `viewBox height="52"` clips it —
+invisible with live text (which was already broken for reason #2), but
+very visible once converted to a real vector shape ("Project" → "Proiect").
+Confirmed by direct bounding-box computation, not eyeballing. Fixed by
+widening `rtpm-descriptor-navy.svg` / `-white.svg` to
+`viewBox="0 0 164 55"` (was 52) — the extra 3 units are transparent
+padding below existing content, nothing shifts. **Every other file/text
+in the set was checked and fits with margin** (see the box-check script
+approach below) — this was the only overflow.
+
+Tooling notes for whoever re-verifies Logo later:
+- `.ds-sync/storybook/http-serve.mjs`'s MIME map is missing `.svg` (and
+  most other non-JS/CSS/JSON/PNG types) — this is the SAME server
+  `package-validate.mjs`'s render check uses internally, so without this
+  fix the render check's own screenshots show broken images regardless of
+  whether the SVGs are actually fine. Not committed anywhere (`.ds-sync/`
+  is gitignored, scripts are re-copied fresh each sync) — **re-patch
+  `MIME` in that file if debugging an image-loading component again**:
+  add at least `'.svg': 'image/svg+xml'`.
+- Do NOT trust "renders, non-empty root" as proof an `<img>`-based
+  component looks right — `naturalWidth`/`naturalHeight` can be `0` while
+  `complete` is `true` (wrong MIME type on the image response), and a
+  Chromium `<img>`-SVG viewBox clip can silently drop a real glyph feature
+  that inline-SVG rendering of the identical file does not. When a
+  component loads external assets by URL, verify the ACTUAL decoded pixels
+  (screenshot a real render), not just "no JS error."
+
 ## Re-sync risks
+- **`finalize_plan` needs `assets/**` added to both `writes` and `deletes`
+  manually every time** — it's not one of the base skill's standard globs.
+  Forgetting it means Logo's SVGs silently don't get (re-)uploaded even
+  though the component itself does.
 - If more components are added to `components/` without also being
   re-exported from root `index.ts`, they won't be discovered (the converter
   bundles from the `dist/` entry, which comes from `index.ts`). Update the
