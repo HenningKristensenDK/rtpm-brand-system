@@ -19,17 +19,23 @@ avatar, watermark.
 
 ## Construction (ratios of icon height `x` — never absolute pixels)
 
-- **A**: wordmark 0.88x, tracking −0.034em, gap 0.28x, Barlow Semi Condensed 700
-- **B**: wordmark 0.88x (same tracking as A), descriptor 0.25x · Inter 500 ·
-  0.01em tracking, 10px floor, wording is always "Project Control"
-- **C**: wordmark 0.95x, tracking −0.012em, gap 0.36x
-- **All**: clear space 0.5x on all four sides (1x on a photograph)
+- **A**: wordmark 0.88x, tracking −0.034em, gap 0.28x (optical, not metric),
+  Barlow Semi Condensed 700
+- **B**: wordmark 0.88x (same tracking as A, cap height flush to icon top),
+  descriptor 0.25x · Inter 500 · 0.01em tracking, baseline flush to icon
+  bottom, 10px floor, wording is always "Project Control" in Title Case,
+  tracked flush to the M
+- **C**: wordmark 0.95x, tracking −0.012em, gap 0.36x, cap height centred
+  on the icon
+- **All**: clear space 0.5x on all four sides (1x on a photograph), measured
+  from the icon bounding box
 
 ## Minimum sizes
 
 - Lockup A: 16px icon height on screen / 8mm print
-- Lockup B: **40px minimum** — below that the descriptor falls under its
-  10px floor, so drop to Lockup A instead. Never shrink B past this.
+- Lockup B: **40px minimum** (12mm print) — below that the descriptor falls
+  under its 10px floor, so drop to Lockup A instead. Never shrink B past
+  this.
 - Icon alone: 16px
 
 ## Colorways — always one flat color, never mixed
@@ -80,3 +86,9 @@ without a 1x separator rule, recoloring to match a customer's brand.
 Each file already contains the complete assembled lockup (icon + wordmark
 where applicable) — never recompose icon and wordmark manually as
 separate elements.
+
+**Production notes:** SVG is the master format for screen and print;
+wordmark text is converted to outlines in every distributed file so the
+mark never depends on Barlow Semi Condensed being installed. PNG exports
+ship at 1x, 2x and 3x with a transparent background — no file carries a
+background rectangle except the app tile.
