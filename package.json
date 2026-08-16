@@ -22,7 +22,8 @@
     "assets"
   ],
   "scripts": {
-    "build": "tsup index.ts --format esm,cjs --dts --out-dir dist"
+    "build": "tsup index.ts --format esm,cjs --dts --out-dir dist",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "react": ">=18",
