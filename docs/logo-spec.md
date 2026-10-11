@@ -81,7 +81,6 @@ without a 1x separator rule, recoloring to match a customer's brand.
 | `rtpm-descriptor-navy` / `-white` | Lockup B |
 | `rtpm-realtime-navy` / `-white` | Lockup C |
 | `rtpm-icon-navy` / `-white` / `-indigo` / `-black` | Icon alone |
-| `rtpm-appicon` | App tile, 14% inset on Ink Navy, 1024px |
 
 Each file already contains the complete assembled lockup (icon + wordmark
 where applicable) — never recompose icon and wordmark manually as
