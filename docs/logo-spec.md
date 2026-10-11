@@ -1,93 +1,71 @@
 # RTPM Logo Specification
 
-**Version:** 1.0 · **Owner:** Henning Kristensen · **Status:** Approved
+**Version:** 2.0 · **Date:** 2026.10.11 · **Owner:** Henning Kristensen · **Status:** Approved
 
-The mark identifies; it does not explain. Descriptors live in a dedicated
-descriptor lockup at a legible size, or in surrounding copy — never
-crammed into the primary mark at unreadable size.
+Change from v1.0: two versions instead of three lockups. The "Real Time" lockup is the logo. The icon alone covers small spaces. Icon + RTPM (A) and the descriptor lockup (B) are retired, and so is the app tile. A tab icon (favicon) is added.
 
-## The three lockups
+The mark identifies; it does not explain. The full name "Real Time Project Management" is written in the text near the logo, not inside it.
 
-| Lockup | Composition | Use |
+## The two versions
+
+| Version | Composition | Use |
 |---|---|---|
-| **A · Primary** | Icon + RTPM | App, website header, documents, decks, email signature. 9 jobs out of 10. |
-| **B · Cold contact** | Icon + RTPM + descriptor ("Project Control") | LinkedIn profile, first slide, business card, tender cover — reader doesn't yet know what RTPM is. |
-| **C · Real Time** | Icon + "Real Time" | Product-family/platform contexts, video corners, campaign end cards. |
+| **Logo** | Icon + "Real Time" | Everywhere a logo is placed: website header, decks, documents, LinkedIn, email signature, campaign end cards. |
+| **Icon** | Icon alone | Where a wordmark cannot be read: browser tab, avatar, app icon, watermark. |
 
-Icon alone only where a wordmark can't be read at all: app icon, favicon,
-avatar, watermark.
+**Name in text.** On every page, profile, first slide and document, write "Real Time Project Management" in full the first time, then "RTPM". RTPM stays the short name, the domain (rtpm.dk) and the file-name prefix. Descriptor lines ("Project Management", "Project Control") are never part of the logo; use them in copy and infographics.
 
-## Construction (ratios of icon height `x` — never absolute pixels)
+## Construction (ratios of icon height `x`)
 
-- **A**: wordmark 0.88x, tracking −0.034em, gap 0.28x (optical, not metric),
-  Barlow Semi Condensed 700
-- **B**: wordmark 0.88x (same tracking as A, cap height flush to icon top),
-  descriptor 0.25x · Inter 500 · 0.01em tracking, baseline flush to icon
-  bottom, 10px floor, wording is always "Project Control" in Title Case,
-  tracked flush to the M
-- **C**: wordmark 0.95x, tracking −0.012em, gap 0.36x, cap height centred
-  on the icon
-- **All**: clear space 0.5x on all four sides (1x on a photograph), measured
-  from the icon bounding box
+- **Logo**: wordmark "Real Time" 0.95x, Barlow Semi Condensed 700, tracking −0.012em, gap 0.36x, cap height centred on the icon.
+- **Clear space**: 0.5x on all four sides (1x on a photograph), measured from the icon bounding box.
 
 ## Minimum sizes
 
-- Lockup A: 16px icon height on screen / 8mm print
-- Lockup B: **40px minimum** (12mm print) — below that the descriptor falls
-  under its 10px floor, so drop to Lockup A instead. Never shrink B past
-  this.
-- Icon alone: 16px
+- Logo: 16px icon height on screen, 8mm in print.
+- Icon: 16px. Below 32px use the tab icon file (below), not the master icon.
 
-## Colorways — always one flat color, never mixed
+## Tab icon (favicon)
 
-| Role | Color | Value | Use |
+The master icon's channels between the brackets are 5.2% of its width, under one pixel at 16px, so it closes up in a browser tab. The tab icon is the same mark drawn on a 32-pixel grid with the channels set to 2 units (1px at 16px), so the four brackets stay apart. Use it only at 64px and below.
+
+- `rtpm-favicon.svg`: navy, switches to white when the browser runs in dark mode. The default in every app.
+- `rtpm-favicon.ico`: 16 and 32px navy, for browsers without SVG favicon support.
+- `rtpm-favicon-180.png`: apple-touch icon.
+- `rtpm-favicon-navy.svg`, `rtpm-favicon-white.svg`: fixed colour variants.
+
+No background square. The mark sits directly on the tab.
+
+## Colourways: always one flat colour
+
+| Role | Colour | Value | Use |
 |---|---|---|---|
 | Primary | Ink Navy | `#070474` | Default, on Paper White or near-white |
-| Secondary | Signal Indigo | `#0D08D2` | Only where Ink Navy is too heavy (small screen UI) |
-| Reverse | White | on Ink Navy only | The only approved dark background |
-| Monochrome | Black | `#000000` | Single-color print, engraving |
+| Reverse | White | `#ffffff` | On Ink Navy and on dark browser chrome |
+| Icon only | Signal Indigo | `#0D08D2` | Only where Ink Navy is too heavy in small UI |
+| Icon only | Black | `#000000` | Single-colour print, engraving |
 
-**Never**: gold-only, gradient, multi-color (icon one color + wordmark
-another), or status-colored (red/amber/green) logos. Gold is a layout
-highlight color, never a logo color.
+Never gold, gradient, multi-colour or status-coloured logos. Indigo is never used on a dark background: it disappears there (see the tab icon).
 
 ## The icon
 
-Four brackets around a shared open center — several parties, one common
-record. Corners are **sharp**, deliberately — rounding closes the
-negative-space channels between brackets that keep it legible small, and
-a soft mark beside Barlow Semi Condensed's flat terminals reads as two
-drawing systems. App tile: icon at 14% inset on Ink Navy field.
+Four brackets around a shared open centre: several parties, one common record. Corners are sharp, deliberately: rounding closes the channels between brackets that keep it legible small.
 
-## Misuse — never do this
+## Misuse
 
-**To the mark:** round corners, outline, re-space/stretch/skew, substitute
-the typeface, add shadow/glow/bevel/3D, rotate or set on a diagonal,
-reorder or mirror elements, add a tagline/year/slash inside the lockup,
-box or badge it, rebuild by eye instead of by the ratios above.
+**To the mark:** round corners, outline, re-space, stretch or skew, substitute the typeface, add shadow or glow, rotate, mirror, add a tagline inside the lockup, box or badge it, put it on a coloured square.
 
-**To placement:** on a busy photo area, reverse logo on mid-tone or
-gradient, navy logo on dark background, breaking clear space with type
-or a rule, more than one logo per surface, on a face-and-hook visual
-(no mark permitted there — see marketing-rules.md), Lockup B below 40px,
-icon alone where a full lockup would fit, pairing with a partner logo
-without a 1x separator rule, recoloring to match a customer's brand.
+**To placement:** busy photo area, reverse logo on a mid-tone or gradient, navy logo on a dark background, breaking clear space, more than one logo per surface, on a face-and-hook visual (see marketing-rules.md), the icon alone where the logo would fit, recolouring to a customer's brand.
 
 ## File set (all in `assets/logos/`)
 
 | Filename | Use |
 |---|---|
-| `rtpm-primary-navy` / `-white` / `-indigo` / `-black` | Lockup A |
-| `rtpm-descriptor-navy` / `-white` | Lockup B |
-| `rtpm-realtime-navy` / `-white` | Lockup C |
-| `rtpm-icon-navy` / `-white` / `-indigo` / `-black` | Icon alone |
+| `rtpm-realtime-navy` / `-white` | Logo |
+| `rtpm-icon-navy` / `-white` / `-indigo` / `-black` | Icon, 32px and above |
+| `rtpm-favicon` (svg, ico, 180 png), `rtpm-favicon-navy` / `-white` | Tab icon, below 32px |
+| `rtpm-primary-*`, `rtpm-descriptor-*` | Retired (icon + RTPM, descriptor lockup). Kept for existing apps until replaced. |
 
-Each file already contains the complete assembled lockup (icon + wordmark
-where applicable) — never recompose icon and wordmark manually as
-separate elements.
+Each file contains the complete assembled mark. Never recompose icon and wordmark by hand.
 
-**Production notes:** SVG is the master format for screen and print;
-wordmark text is converted to outlines in every distributed file so the
-mark never depends on Barlow Semi Condensed being installed. PNG exports
-ship at 1x, 2x and 3x with a transparent background — no file carries a
-background rectangle except the app tile.
+**Production note:** wordmark text must be outlined in every distributed file so the mark never depends on Barlow Semi Condensed being installed.

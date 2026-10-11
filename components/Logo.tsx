@@ -4,7 +4,12 @@ export type LogoLockup = 'A' | 'B' | 'C' | 'icon';
 export type LogoColorway = 'navy' | 'white' | 'indigo' | 'black';
 
 export interface LogoProps {
-  lockup: LogoLockup;
+  /**
+   * 'C' (icon + "Real Time") is the logo and the default. 'icon' is the
+   * icon alone. 'A' and 'B' are retired in logo spec v2.0 and only kept so
+   * existing apps keep rendering; they log a warning in development.
+   */
+  lockup?: LogoLockup;
   colorway?: LogoColorway;
   /** Icon height in px. Lockup B auto-falls-back to A below 40px. */
   size?: number;
@@ -71,7 +76,7 @@ function resolveFilename(
 /**
  * RTPM Logo
  *
- * Renders one of the three approved lockups (or the icon alone) from the
+ * Renders the RTPM logo (icon + "Real Time", the default) or the icon alone from the
  * pre-built SVG files in assets/logos/ — each file already contains the
  * complete assembled mark, so this component never recomposes icon and
  * wordmark manually.
@@ -89,13 +94,17 @@ function resolveFilename(
  * component can't see. Treat violations as a review-time check.
  */
 export function Logo({
-  lockup,
+  lockup = 'C',
   colorway = 'navy',
   size = 24,
   onPhotograph = false,
   assetsBasePath = '/assets/logos',
 }: LogoProps) {
   const { filename, warning } = resolveFilename(lockup, colorway, size);
+
+  if ((lockup === 'A' || lockup === 'B') && process.env.NODE_ENV !== 'production') {
+    console.warn(`Logo: lockup="${lockup}" is retired (logo spec v2.0). Use lockup="C" (icon + Real Time) or lockup="icon".`);
+  }
 
   if (warning && process.env.NODE_ENV !== 'production') {
     console.warn(warning);
@@ -113,7 +122,7 @@ export function Logo({
     >
       <img
         src={`${assetsBasePath}/${filename}.svg`}
-        alt="RTPM"
+        alt="Real Time Project Management"
         height={size}
         style={{ height: `${size}px`, width: 'auto', display: 'block' }}
       />
