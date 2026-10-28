@@ -41,7 +41,6 @@
   --rtpm-indigo:            #0D08D2;  /* signal only, never a large fill */
   --rtpm-indigo-hover:      #0A06A8;
   --rtpm-navy-label:        #CFCEFF;  /* eyebrow / label on Ink Navy */
-  --rtpm-navy-mute:         #6F6DC9;  /* [UNRATIFIED] sidebar group labels on navy */
   /* Retired, do not reintroduce: #2E2CA1, #0A0868 (sampling artifacts) */
 
   /* --- Accent --------------------------------------------------------- */
@@ -87,8 +86,6 @@
   --rtpm-series-3:          #FF8B00;
   --rtpm-series-4:          #00ACFF;
   --rtpm-series-5:          #AA00D3;
-  --rtpm-series-alt:        #5652E0;  /* [UNRATIFIED] used in RTPM 0 bar charts,
-                                         not one of the five locked series */
 
   /* --- Type ------------------------------------------------------------ */
   --rtpm-font-display:      'Barlow Semi Condensed', sans-serif;
@@ -247,14 +244,14 @@
   --icon-size-lg:             24px;   /* cards, standalone */
 
   /* --- Logo construction — every dimension is a ratio of icon height x --- */
-  --logo-wordmark-ratio:      0.88;   /* lockups A and B */
+  --logo-wordmark-ratio:      0.88;   /* lockups A and B */ /* @kind other */
   --logo-wordmark-tracking:   -0.034em;
-  --logo-gap-ratio:           0.28;
-  --logo-descriptor-ratio:    0.25;   /* Inter 500, 10px floor */
-  --logo-realtime-ratio:      0.95;
+  --logo-gap-ratio:           0.28; /* @kind other */
+  --logo-descriptor-ratio:    0.25;   /* Inter 500, 10px floor */ /* @kind other */
+  --logo-realtime-ratio:      0.95; /* @kind other */
   --logo-realtime-tracking:   -0.012em;
   --logo-realtime-gap:        0.36;
-  --logo-clearspace-ratio:    0.5;    /* 1.0 over a photograph */
+  --logo-clearspace-ratio:    0.5;    /* 1.0 over a photograph */ /* @kind other */
   --logo-min-lockup-a:        16px;
   --logo-min-lockup-b:        40px;
   --logo-min-icon:            16px;
