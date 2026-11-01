@@ -5,7 +5,8 @@ Architecture). These govern LinkedIn graphics, video thumbnails, outreach
 slides, carousels, and rtpm.dk. Read this before generating any marketing
 or web asset — it's more specific than "use the brand colors."
 
-v4 · updated 2026-08-14 · doctrine section added (external design review).
+v5 · updated 2026-09-10 · added LinkedIn comment visual template (E),
+spec verified against a Henning-approved, mobile-tested image.
 Source of truth for the doctrine: `docs/RTPM 1. Core Tokens.dc.html`,
 sections 08–11.
 
@@ -205,6 +206,24 @@ this is a comparison, not a scorecard.
 - **Article/newsletter banner (16:9)**: also reused as the rtpm.dk blog
   header. Text left 62%, icon graphic right at low opacity (the one
   permitted decorative use of the mark), headline max 3 lines at 108px.
+
+### E. LinkedIn comment visual
+- **Canvas**: 1440×1080 (4:3). The only marketing format built at 4:3 —
+  this is LinkedIn's in-feed comment crop, fixed by the platform, not a
+  design choice.
+- **Safe margins**: top 80px, left 120px, right 140px, bottom 160px,
+  minimum. Content inside these clips at LinkedIn's crop before a reader
+  can expand the image.
+- **Minimum type sizes** (must read on a phone without opening the
+  image): headline 95px, single stat number 80px, category/column label
+  27px, caption/source line 22px.
+- One idea, one highlight — same rule as any other canvas (2). Typical
+  use: the "layer 2" comment on a face+hook post, turning the number the
+  headline promised into one image.
+- **Source discipline as D** — any stat shown must trace to an approved
+  source. Content-gated in effect, not just by name.
+- Spec measured directly from a Henning-approved, mobile-tested comment
+  image (2026-09-10) — not a theoretical figure.
 
 ### F. Dedicated 16:9 compositions (not crops of the 4:5 versions)
 - **Single-stat 16:9**: 40/60 split with a vertical rule — number gets

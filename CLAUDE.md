@@ -52,10 +52,11 @@ Full doctrine: `docs/marketing-rules.md` Part 0 and section 9.
 4. **Status colors are fixed-meaning, never repurposed:** critical=red,
    high=orange, medium=amber `#E0A800` (never gold), low/done=green,
    none=grey.
-5. **Logo:** always render via the `<Logo />` component — never recreate
-   the mark with divs or raw SVG by hand. Respect the lockup rules in
-   `docs/logo-spec.md` (Lockup B needs ≥40px icon height, etc.) — the
-   component enforces most of this itself, but check `assetsBasePath` is
+5. **Logo:** always render via the `<Logo />` component (default: icon +
+   "Real Time"; `lockup="icon"` for small spaces). Never recreate the mark
+   by hand. Lockups A and B are retired (`docs/logo-spec.md` v2.0). The
+   browser tab icon is `assets/logos/rtpm-favicon.svg` (with `.ico` and
+   180px PNG fallbacks), never the master icon. Check `assetsBasePath` is
    set to wherever `assets/logos/*.svg` actually resolves in this app.
 6. **Website vs. marketing typography split:** if this is `rtpm.dk` or
    any website-facing page, use `--font-ui` (Inter) only — never
