@@ -117,6 +117,13 @@
   --rtpm-shadow-raised:     0 2px 8px rgba(21, 22, 43, 0.08);
   --rtpm-shadow-overlay:    0 8px 24px rgba(21, 22, 43, 0.12);
 
+  /* --- Motion ---------------------------------------------------------- */
+  --rtpm-motion-fast:      150ms;   /* feedback: hover, focus, a pill swap */
+  --rtpm-motion-base:      350ms;   /* a state change the eye should follow */
+  --rtpm-motion-slow:      600ms;   /* a panel, a scene step, a reveal */
+  --rtpm-ease-standard:    cubic-bezier(0.2, 0, 0, 1);
+  --rtpm-ease-exit:        cubic-bezier(0.4, 0, 1, 1);
+
 
   /* ======================================================================
      2. SEMANTIC ALIASES — the layer components consume
@@ -236,6 +243,13 @@
   --radius-card:              var(--rtpm-radius-card);
   --radius-control:           var(--rtpm-radius-input);
   --radius-pill:              var(--rtpm-radius-pill);
+
+  /* --- Motion — see docs/motion.md; reduced motion shows the end state --- */
+  --motion-feedback:          var(--rtpm-motion-fast);
+  --motion-transition:        var(--rtpm-motion-base);
+  --motion-scene:             var(--rtpm-motion-slow);
+  --motion-ease:              var(--rtpm-ease-standard);
+  --motion-ease-exit:         var(--rtpm-ease-exit);
 
   /* --- Icons — sharp corners, monoline, 1.5px stroke, no library sets --- */
   --icon-stroke:              1.5px;

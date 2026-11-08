@@ -87,7 +87,8 @@ this repo exists to prevent.
 - Doctrine (colour meaning, hierarchy, highlight rule, signature
   structures): `docs/marketing-rules.md` Part 0 + section 9, and
   `docs/RTPM 1. Core Tokens.dc.html` sections 08–11
-- Colors, type, spacing, radius, shadow: `tokens/tokens.css` (only file)
+- Colors, type, spacing, radius, shadow, motion: `tokens/tokens.css` (only file)
+- Motion and animation: `docs/motion.md`
 - Components: `components/*.tsx`
 - Logo rules: `docs/logo-spec.md`
 - Marketing/website visual rules: `docs/marketing-rules.md`

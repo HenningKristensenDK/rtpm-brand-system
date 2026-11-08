@@ -284,6 +284,11 @@ alternative — never three CTAs.
 **No stock photography, no abstract illustration, no invented metrics.**
 Real product screens and real workflow sequences only.
 
+**Motion is welcome where it shows work happening.** A workflow playing
+out in the brand palette (an item drafted, approved, logged) is a product
+screen in time, and allowed. Durations and easings come from the
+`--motion-*` tokens; the rest is in `docs/motion.md`.
+
 ---
 
 ## 8. Quick pre-generation checklist
