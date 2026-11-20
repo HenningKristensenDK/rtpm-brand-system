@@ -31,6 +31,16 @@ export interface LogoProps {
 // rtpm-realtime-black. Requesting an unsupported combo falls back to navy.
 const LOCKUP_B_C_COLORWAYS: LogoColorway[] = ['navy', 'white'];
 
+// Width / height of each file family in assets/logos/ (from the SVG viewBox).
+// The <img> gets a width attribute from this, so the browser reserves the
+// logo's space before the file loads and nothing beside it shifts.
+const LOCKUP_RATIO: Record<LogoLockup, number> = {
+  A: 164 / 52, // rtpm-primary-*
+  B: 164 / 55, // rtpm-descriptor-*
+  C: 259 / 52, // rtpm-realtime-*
+  icon: 1, // rtpm-icon-*
+};
+
 function resolveFilename(
   lockup: LogoLockup,
   colorway: LogoColorway,
@@ -100,7 +110,8 @@ export function Logo({
   onPhotograph = false,
   assetsBasePath = '/assets/logos',
 }: LogoProps) {
-  const { filename, warning } = resolveFilename(lockup, colorway, size);
+  const { filename, effectiveLockup, warning } = resolveFilename(lockup, colorway, size);
+  const width = Math.round(size * LOCKUP_RATIO[effectiveLockup]);
 
   if ((lockup === 'A' || lockup === 'B') && process.env.NODE_ENV !== 'production') {
     console.warn(`Logo: lockup="${lockup}" is retired (logo spec v2.0). Use lockup="C" (icon + Real Time) or lockup="icon".`);
@@ -123,6 +134,7 @@ export function Logo({
       <img
         src={`${assetsBasePath}/${filename}.svg`}
         alt="Real Time Project Management"
+        width={width}
         height={size}
         style={{ height: `${size}px`, width: 'auto', display: 'block' }}
       />
