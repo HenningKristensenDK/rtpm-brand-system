@@ -1,8 +1,8 @@
 # RTPM Logo Specification
 
-**Version:** 2.0 · **Date:** 2026.10.11 · **Owner:** Henning Kristensen · **Status:** Approved
+**Version:** 2.1 · **Date:** 2026.11.26 · **Owner:** Henning Kristensen · **Status:** Approved
 
-Change from v1.0: two versions instead of three lockups. The "Real Time" lockup is the logo. The icon alone covers small spaces. Icon + RTPM (A) and the descriptor lockup (B) are retired, and so is the app tile. A tab icon (favicon) is added.
+Change in v2.1: product mark for Klik (section below). Change from v1.0: two versions instead of three lockups. The "Real Time" lockup is the logo. The icon alone covers small spaces. Icon + RTPM (A) and the descriptor lockup (B) are retired, and so is the app tile. A tab icon (favicon) is added.
 
 The mark identifies; it does not explain. The full name "Real Time Project Management" is written in the text near the logo, not inside it.
 
@@ -57,6 +57,15 @@ Four brackets around a shared open centre: several parties, one common record. C
 
 **To placement:** busy photo area, reverse logo on a mid-tone or gradient, navy logo on a dark background, breaking clear space, more than one logo per surface, on a face-and-hook visual (see marketing-rules.md), the icon alone where the logo would fit, recolouring to a customer's brand.
 
+## Product mark: Klik
+
+Klik, RTPM's free screenshot app, uses the icon with a solid dot in the open centre, like a focus point (Henning 2026.11.26). The dot tells Klik apart from the RTPM platform; everything else follows this spec.
+
+- Dot: a circle at the centre, radius 0.11x (tab-icon grid: radius 3.6 of 32).
+- Colours: Ink Navy, or White on dark. One flat colour, as the icon.
+- Use: Klik's app and tray icon, the Klik toolbar and window header, Store listing. Never as the RTPM logo, never with the "Real Time" wordmark.
+- Files: `klik-icon-navy.svg`, `klik-icon-white.svg`, `png/klik-icon-navy-1024.png`. Small sizes are drawn on the tab-icon grid (script in the Klik repo).
+
 ## File set (all in `assets/logos/`)
 
 | Filename | Use |
@@ -64,6 +73,7 @@ Four brackets around a shared open centre: several parties, one common record. C
 | `rtpm-realtime-navy` / `-white` | Logo |
 | `rtpm-icon-navy` / `-white` / `-indigo` / `-black` | Icon, 32px and above |
 | `rtpm-favicon` (svg, ico, 180 png), `rtpm-favicon-navy` / `-white` | Tab icon, below 32px |
+| `klik-icon-navy` / `-white` | Klik product mark (icon with centre dot) |
 | `rtpm-primary-*`, `rtpm-descriptor-*` | Retired (icon + RTPM, descriptor lockup). Kept for existing apps until replaced. |
 
 Each file contains the complete assembled mark. Never recompose icon and wordmark by hand.
